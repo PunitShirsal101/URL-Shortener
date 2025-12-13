@@ -1,2 +1,2 @@
-# URL-Shortener
-Enterprise URL Shortener
+# URL Shortener
+

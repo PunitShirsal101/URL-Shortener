@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: URL-Shortener
+
+server:
+  port: 8080
+
+
