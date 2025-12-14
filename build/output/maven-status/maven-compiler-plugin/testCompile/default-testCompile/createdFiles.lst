@@ -1,2 +1,7 @@
-com\shortscale\util\HashGeneratorTest.class
+com\shortscale\controller\RedirectControllerTest.class
 com\shortscale\service\UrlServiceTest.class
+com\shortscale\controller\UrlControllerTest.class
+com\shortscale\util\RateLimiterTest.class
+com\shortscale\ApplicationTest.class
+com\shortscale\util\HashGeneratorTest.class
+com\shortscale\analytics\KafkaAnalyticsConsumerTest.class

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RedisConfig.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">url-shortener</a> &gt; <a href="index.source.html" class="el_package">com.shortscale.config</a> &gt; <span class="el_source">RedisConfig.java</span></div><h1>RedisConfig.java</h1><pre class="source lang-java linenums">package com.shortscale.config;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.shortscale.model.UrlMapping;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
+
+@Configuration
+<span class="fc" id="L14">public class RedisConfig {</span>
+
+    @Bean
+    public RedisTemplate&lt;String, UrlMapping&gt; redisTemplate(RedisConnectionFactory connectionFactory, ObjectMapper objectMapper) {
+<span class="fc" id="L18">        RedisTemplate&lt;String, UrlMapping&gt; template = new RedisTemplate&lt;&gt;();</span>
+<span class="fc" id="L19">        template.setConnectionFactory(connectionFactory);</span>
+<span class="fc" id="L20">        template.setKeySerializer(new StringRedisSerializer());</span>
+<span class="fc" id="L21">        Jackson2JsonRedisSerializer&lt;UrlMapping&gt; serializer = new Jackson2JsonRedisSerializer&lt;&gt;(objectMapper, UrlMapping.class);</span>
+<span class="fc" id="L22">        template.setValueSerializer(serializer);</span>
+<span class="fc" id="L23">        return template;</span>
+    }
+
+    @Bean
+    public ObjectMapper objectMapper() {
+<span class="fc" id="L28">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="fc" id="L29">        objectMapper.registerModule(new JavaTimeModule());</span>
+<span class="fc" id="L30">        return objectMapper;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -2,10 +2,10 @@
 
 import com.shortscale.service.UrlService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.view.RedirectView;
 
 @RestController
 public class RedirectController {
@@ -17,15 +17,12 @@ public class RedirectController {
 <span class="fc" id="L17">    }</span>
 
     @GetMapping(&quot;/{shortCode}&quot;)
-    public RedirectView redirect(@PathVariable String shortCode) {
-<span class="nc" id="L21">        String originalUrl = urlService.getOriginalUrl(shortCode);</span>
-<span class="nc bnc" id="L22" title="All 2 branches missed.">        if (originalUrl == null) {</span>
-            // Return 404 or something. But RedirectView can handle.
-<span class="nc" id="L24">            RedirectView redirectView = new RedirectView();</span>
-<span class="nc" id="L25">            redirectView.setStatusCode(HttpStatus.NOT_FOUND);</span>
-<span class="nc" id="L26">            return redirectView;</span>
+    public ResponseEntity&lt;?&gt; redirect(@PathVariable String shortCode) {
+<span class="fc" id="L21">        String originalUrl = urlService.getOriginalUrl(shortCode);</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (originalUrl == null) {</span>
+<span class="fc" id="L23">            return ResponseEntity.notFound().build();</span>
         }
-<span class="nc" id="L28">        return new RedirectView(originalUrl);</span>
+<span class="fc" id="L25">        return ResponseEntity.status(HttpStatus.FOUND).header(&quot;Location&quot;, originalUrl).build();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
