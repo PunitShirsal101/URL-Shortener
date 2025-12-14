@@ -1,4 +1,3 @@
-com\shortscale\service\impl\UrlServiceImpl.class
 com\shortscale\repository\RedisUrlRepository.class
 com\shortscale\util\RateLimiter$RequestInfo.class
 com\shortscale\controller\RedirectController.class

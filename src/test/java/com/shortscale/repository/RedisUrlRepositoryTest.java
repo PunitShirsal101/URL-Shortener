@@ -1,4 +1,3 @@
-/*
 package com.shortscale.repository;
 
 import com.shortscale.model.UrlMapping;
@@ -46,7 +45,7 @@ public class RedisUrlRepositoryTest {
     public void testSaveAndFind() {
         UrlMapping mapping = new UrlMapping();
         mapping.setShortCode("test123");
-        mapping.setOriginalUrl("http://example.com");
+        mapping.setOriginalUrl("https://example.com");
         mapping.setCreatedAt(LocalDateTime.now());
         mapping.setClickCount(0);
 
@@ -54,7 +53,7 @@ public class RedisUrlRepositoryTest {
 
         UrlMapping found = repository.findByShortCode("test123");
         assertNotNull(found);
-        assertEquals("http://example.com", found.getOriginalUrl());
+        assertEquals("https://example.com", found.getOriginalUrl());
         assertEquals("test123", found.getShortCode());
     }
 
@@ -64,7 +63,7 @@ public class RedisUrlRepositoryTest {
 
         UrlMapping mapping = new UrlMapping();
         mapping.setShortCode("exists");
-        mapping.setOriginalUrl("http://exists.com");
+        mapping.setOriginalUrl("https://exists.com");
         mapping.setCreatedAt(LocalDateTime.now());
         mapping.setClickCount(0);
 
@@ -73,4 +72,3 @@ public class RedisUrlRepositoryTest {
         assertTrue(repository.existsByShortCode("exists"));
     }
 }
-*/

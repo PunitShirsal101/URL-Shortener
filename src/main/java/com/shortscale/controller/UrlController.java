@@ -1,40 +1,36 @@
 package com.shortscale.controller;
 
-import com.shortscale.api.dto.ShortenRequest;
-import com.shortscale.api.dto.ShortenResponse;
-import com.shortscale.service.UrlService;
-import com.shortscale.util.RateLimiter;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import jakarta.servlet.http.HttpServletRequest;
-
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
-import org.springframework.http.MediaType;
-
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.util.Base64;
-import javax.imageio.ImageIO;
-
 import com.shortscale.api.dto.BulkShortenRequest;
 import com.shortscale.api.dto.BulkShortenResponse;
+import com.shortscale.api.dto.ShortenRequest;
+import com.shortscale.api.dto.ShortenResponse;
+import com.shortscale.service.UrlService;
+import com.shortscale.util.RateLimiter;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/api")
 public class UrlController {
 
-    @Autowired
-    private UrlService urlService;
+    private final UrlService urlService;
+    private final RateLimiter rateLimiter;
 
-    @Autowired
-    private RateLimiter rateLimiter;
+    public UrlController(UrlService urlService, RateLimiter rateLimiter) {
+        this.urlService = urlService;
+        this.rateLimiter = rateLimiter;
+    }
 
     @PostMapping("/shorten")
     public ResponseEntity<ShortenResponse> shortenUrl(@RequestBody ShortenRequest request, HttpServletRequest httpRequest) {

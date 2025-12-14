@@ -12,6 +12,5 @@ C:\Workspace\URL-Shortener\src\main\java\com\shortscale\service\UrlService.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\api\dto\ShortenResponse.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\config\WebSocketConfig.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\api\dto\ShortenRequest.java
-C:\Workspace\URL-Shortener\src\main\java\com\shortscale\service\impl\UrlServiceImpl.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\api\dto\BulkShortenRequest.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\util\RateLimiter.java

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RedirectController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">url-shortener</a> &gt; <a href="index.source.html" class="el_package">com.shortscale.controller</a> &gt; <span class="el_source">RedirectController.java</span></div><h1>RedirectController.java</h1><pre class="source lang-java linenums">package com.shortscale.controller;
+
+import com.shortscale.service.UrlService;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.view.RedirectView;
+
+@RestController
+public class RedirectController {
+
+    private final UrlService urlService;
+
+<span class="fc" id="L15">    public RedirectController(UrlService urlService) {</span>
+<span class="fc" id="L16">        this.urlService = urlService;</span>
+<span class="fc" id="L17">    }</span>
+
+    @GetMapping(&quot;/{shortCode}&quot;)
+    public RedirectView redirect(@PathVariable String shortCode) {
+<span class="nc" id="L21">        String originalUrl = urlService.getOriginalUrl(shortCode);</span>
+<span class="nc bnc" id="L22" title="All 2 branches missed.">        if (originalUrl == null) {</span>
+            // Return 404 or something. But RedirectView can handle.
+<span class="nc" id="L24">            RedirectView redirectView = new RedirectView();</span>
+<span class="nc" id="L25">            redirectView.setStatusCode(HttpStatus.NOT_FOUND);</span>
+<span class="nc" id="L26">            return redirectView;</span>
+        }
+<span class="nc" id="L28">        return new RedirectView(originalUrl);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

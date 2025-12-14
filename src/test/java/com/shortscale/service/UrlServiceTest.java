@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.test.context.TestPropertySource;
@@ -38,10 +39,13 @@ public class UrlServiceTest {
     @MockBean
     private KafkaTemplate<String, com.shortscale.api.dto.AnalyticsEvent> kafkaTemplate;
 
+    @MockBean
+    private RedisConnectionFactory redisConnectionFactory;
+
     @Test
     public void testShortenUrl() {
         ShortenRequest request = new ShortenRequest();
-        request.setOriginalUrl("http://example.com");
+        request.setOriginalUrl("https://example.com");
         request.setCustomShortCode("abc123");
 
         Mockito.when(repository.existsByShortCode("abc123")).thenReturn(false);
@@ -51,7 +55,7 @@ public class UrlServiceTest {
 
         assertNotNull(response);
         assertEquals("http://localhost:8080/abc123", response.getShortUrl());
-        assertEquals("http://example.com", response.getOriginalUrl());
+        assertEquals("https://example.com", response.getOriginalUrl());
         assertEquals("abc123", response.getShortCode());
 
         Mockito.verify(repository).save(Mockito.any());
@@ -60,9 +64,7 @@ public class UrlServiceTest {
     @Test
     public void testGetOriginalUrl() {
         Mockito.when(repository.findByShortCode("abc123")).thenReturn(null);
-
         String originalUrl = urlService.getOriginalUrl("abc123");
-
         assertNull(originalUrl);
     }
 }

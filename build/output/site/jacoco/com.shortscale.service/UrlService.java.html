@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UrlService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">url-shortener</a> &gt; <a href="index.source.html" class="el_package">com.shortscale.service</a> &gt; <span class="el_source">UrlService.java</span></div><h1>UrlService.java</h1><pre class="source lang-java linenums">package com.shortscale.service;
+
+import com.shortscale.api.dto.*;
+import com.shortscale.model.UrlMapping;
+import com.shortscale.repository.RedisUrlRepository;
+import com.shortscale.util.HashGenerator;
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.Map;
+
+@Service
+public class UrlService {
+
+    private final RedisUrlRepository repository;
+    private final HashGenerator hashGenerator;
+    private final SimpMessagingTemplate messagingTemplate;
+    private final KafkaTemplate&lt;String, AnalyticsEvent&gt; kafkaTemplate;
+    private final Counter urlShortenedCounter;
+    private final Counter urlClickedCounter;
+
+<span class="fc" id="L26">    public UrlService(RedisUrlRepository repository, HashGenerator hashGenerator, SimpMessagingTemplate messagingTemplate, KafkaTemplate&lt;String, AnalyticsEvent&gt; kafkaTemplate, MeterRegistry meterRegistry) {</span>
+<span class="fc" id="L27">        this.repository = repository;</span>
+<span class="fc" id="L28">        this.hashGenerator = hashGenerator;</span>
+<span class="fc" id="L29">        this.messagingTemplate = messagingTemplate;</span>
+<span class="fc" id="L30">        this.kafkaTemplate = kafkaTemplate;</span>
+<span class="fc" id="L31">        this.urlShortenedCounter = meterRegistry.counter(&quot;url_shortened_total&quot;);</span>
+<span class="fc" id="L32">        this.urlClickedCounter = meterRegistry.counter(&quot;url_clicked_total&quot;);</span>
+<span class="fc" id="L33">    }</span>
+
+    public ShortenResponse shortenUrl(ShortenRequest request) {
+<span class="fc" id="L36">        String shortCode = request.getCustomShortCode();</span>
+<span class="pc bpc" id="L37" title="2 of 4 branches missed.">        if (shortCode == null || shortCode.isEmpty()) {</span>
+<span class="nc" id="L38">            shortCode = hashGenerator.generateShortCode();</span>
+        } else {
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">            if (repository.existsByShortCode(shortCode)) {</span>
+<span class="nc" id="L41">                throw new IllegalArgumentException(&quot;Custom short code already exists&quot;);</span>
+            }
+        }
+
+<span class="fc" id="L45">        UrlMapping urlMapping = new UrlMapping();</span>
+<span class="fc" id="L46">        urlMapping.setId(System.currentTimeMillis()); // simple ID</span>
+<span class="fc" id="L47">        urlMapping.setShortCode(shortCode);</span>
+<span class="fc" id="L48">        urlMapping.setOriginalUrl(request.getOriginalUrl());</span>
+<span class="fc" id="L49">        urlMapping.setCreatedAt(LocalDateTime.now());</span>
+<span class="pc bpc" id="L50" title="3 of 4 branches missed.">        if (request.getTtlSeconds() != null &amp;&amp; request.getTtlSeconds() &gt; 0) {</span>
+<span class="nc" id="L51">            urlMapping.setExpiresAt(LocalDateTime.now().plusSeconds(request.getTtlSeconds()));</span>
+        }
+<span class="fc" id="L53">        urlMapping.setClickCount(0);</span>
+
+<span class="fc" id="L55">        repository.save(urlMapping);</span>
+
+<span class="fc" id="L57">        ShortenResponse response = new ShortenResponse();</span>
+<span class="fc" id="L58">        response.setShortUrl(&quot;http://localhost:8080/&quot; + shortCode); // assuming port 8080</span>
+<span class="fc" id="L59">        response.setOriginalUrl(request.getOriginalUrl());</span>
+<span class="fc" id="L60">        response.setShortCode(shortCode);</span>
+
+        // Send Kafka event
+<span class="fc" id="L63">        kafkaTemplate.send(&quot;url-analytics&quot;, new AnalyticsEvent(shortCode, LocalDateTime.now(), &quot;shorten&quot;, null, null));</span>
+<span class="fc" id="L64">        urlShortenedCounter.increment(); // Increment the shorten URL counter</span>
+
+<span class="fc" id="L66">        return response;</span>
+    }
+
+    public String getOriginalUrl(String shortCode) {
+<span class="fc" id="L70">        UrlMapping urlMapping = repository.findByShortCode(shortCode);</span>
+<span class="pc bpc" id="L71" title="1 of 2 branches missed.">        if (urlMapping == null) {</span>
+<span class="fc" id="L72">            return null;</span>
+        }
+<span class="nc bnc" id="L74" title="All 4 branches missed.">        if (urlMapping.getExpiresAt() != null &amp;&amp; LocalDateTime.now().isAfter(urlMapping.getExpiresAt())) {</span>
+<span class="nc" id="L75">            return null; // expired</span>
+        }
+<span class="nc" id="L77">        urlMapping.setClickCount(urlMapping.getClickCount() + 1);</span>
+<span class="nc" id="L78">        repository.save(urlMapping); // update click count</span>
+        // Send real-time update
+<span class="nc" id="L80">        messagingTemplate.convertAndSend(&quot;/topic/analytics&quot;, Map.of(&quot;shortCode&quot;, shortCode, &quot;clickCount&quot;, urlMapping.getClickCount()));</span>
+        // Send Kafka event
+<span class="nc" id="L82">        kafkaTemplate.send(&quot;url-analytics&quot;, new AnalyticsEvent(shortCode, LocalDateTime.now(), &quot;click&quot;, null, null));</span>
+<span class="nc" id="L83">        urlClickedCounter.increment(); // Increment the clicked URL counter</span>
+<span class="nc" id="L84">        return urlMapping.getOriginalUrl();</span>
+    }
+
+    public int getClickCount(String shortCode) {
+<span class="nc" id="L88">        UrlMapping urlMapping = repository.findByShortCode(shortCode);</span>
+<span class="nc bnc" id="L89" title="All 2 branches missed.">        return urlMapping != null ? urlMapping.getClickCount() : 0;</span>
+    }
+
+    public BulkShortenResponse bulkShortenUrls(BulkShortenRequest request) {
+<span class="nc" id="L93">        BulkShortenResponse response = new BulkShortenResponse();</span>
+<span class="nc" id="L94">        response.setResponses(request.getRequests().stream().map(this::shortenUrl).toList());</span>
+<span class="nc" id="L95">        return response;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
