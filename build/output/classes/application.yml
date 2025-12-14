@@ -16,6 +16,13 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: "*"
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
 
 server:
   port: 8080
@@ -31,9 +38,3 @@ spring:
       port: 6379
   kafka:
     bootstrap-servers: kafka:9092
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
