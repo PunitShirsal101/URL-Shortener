@@ -1,3 +1,2 @@
 com\shortscale\util\HashGeneratorTest.class
-com\shortscale\repository\RedisUrlRepositoryTest.class
 com\shortscale\service\UrlServiceTest.class

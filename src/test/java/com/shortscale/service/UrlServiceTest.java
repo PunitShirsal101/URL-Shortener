@@ -16,7 +16,7 @@ import org.springframework.test.context.TestPropertySource;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@TestPropertySource(properties = {"spring.kafka.bootstrap-servers=", "spring.kafka.listener.concurrency=0"})
+@TestPropertySource(properties = {"spring.kafka.enabled=false", "spring.kafka.bootstrap-servers=", "spring.kafka.listener.concurrency=0"})
 public class UrlServiceTest {
 
     @Autowired
