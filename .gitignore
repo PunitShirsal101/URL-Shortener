@@ -1,6 +1,5 @@
 .idea/
-build/
-src/test/coverages/
+build/output
 *.iml
 *.log
 .DS_Store
