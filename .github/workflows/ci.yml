@@ -34,4 +34,4 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
-        file: ./target/site/jacoco/jacoco.xml
+        file: ./build/output/site/jacoco/jacoco.xml
