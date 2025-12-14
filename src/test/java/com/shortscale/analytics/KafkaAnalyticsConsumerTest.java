@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class KafkaAnalyticsConsumerTest {
 
     @Test
-    public void testConsumeAnalyticsEvent() {
+    public void shouldConsumeAnalyticsEvent() {
         KafkaAnalyticsConsumer consumer = new KafkaAnalyticsConsumer();
         AnalyticsEvent event = new AnalyticsEvent();
         event.setShortCode("abc");

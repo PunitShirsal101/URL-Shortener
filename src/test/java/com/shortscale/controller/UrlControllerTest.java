@@ -1,6 +1,8 @@
 package com.shortscale.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.zxing.WriterException;
+import com.google.zxing.qrcode.QRCodeWriter;
 import com.shortscale.api.dto.BulkShortenRequest;
 import com.shortscale.api.dto.BulkShortenResponse;
 import com.shortscale.api.dto.ShortenRequest;
@@ -8,6 +10,8 @@ import com.shortscale.api.dto.ShortenResponse;
 import com.shortscale.service.UrlService;
 import com.shortscale.util.RateLimiter;
 import org.junit.jupiter.api.Test;
+import org.mockito.MockedConstruction;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -16,7 +20,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
 
-import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -38,12 +42,12 @@ public class UrlControllerTest {
     private ObjectMapper objectMapper;
 
     @Test
-    public void testShortenUrlSuccess() throws Exception {
+    public void shouldShortenUrlSuccessfully() throws Exception {
         ShortenRequest request = new ShortenRequest();
-        request.setOriginalUrl("http://example.com");
+        request.setOriginalUrl("https://example.com");
         ShortenResponse response = new ShortenResponse();
         response.setShortUrl("http://localhost:8080/abc");
-        response.setOriginalUrl("http://example.com");
+        response.setOriginalUrl("https://example.com");
         response.setShortCode("abc");
 
         when(rateLimiter.isAllowed(any())).thenReturn(true);
@@ -57,9 +61,9 @@ public class UrlControllerTest {
     }
 
     @Test
-    public void testShortenUrlRateLimited() throws Exception {
+    public void shouldReturnTooManyRequestsWhenRateLimited() throws Exception {
         ShortenRequest request = new ShortenRequest();
-        request.setOriginalUrl("http://example.com");
+        request.setOriginalUrl("https://example.com");
 
         when(rateLimiter.isAllowed(any())).thenReturn(false);
 
@@ -70,7 +74,7 @@ public class UrlControllerTest {
     }
 
     @Test
-    public void testShortenUrlInvalid() throws Exception {
+    public void shouldReturnBadRequestWhenInvalid() throws Exception {
         ShortenRequest request = new ShortenRequest();
         request.setOriginalUrl("invalid");
 
@@ -84,10 +88,10 @@ public class UrlControllerTest {
     }
 
     @Test
-    public void testBulkShortenUrlsSuccess() throws Exception {
+    public void shouldBulkShortenUrlsSuccessfully() throws Exception {
         BulkShortenRequest request = new BulkShortenRequest();
         ShortenRequest sr = new ShortenRequest();
-        sr.setOriginalUrl("http://example.com");
+        sr.setOriginalUrl("https://example.com");
         request.setRequests(List.of(sr));
 
         BulkShortenResponse response = new BulkShortenResponse();
@@ -105,7 +109,7 @@ public class UrlControllerTest {
     }
 
     @Test
-    public void testBulkShortenUrlsRateLimited() throws Exception {
+    public void shouldReturnTooManyRequestsForBulkWhenRateLimited() throws Exception {
         BulkShortenRequest request = new BulkShortenRequest();
         ShortenRequest sr = new ShortenRequest();
         sr.setOriginalUrl("https://example.com");
@@ -120,7 +124,7 @@ public class UrlControllerTest {
     }
 
     @Test
-    public void testBulkShortenUrlsInvalid() throws Exception {
+    public void shouldReturnBadRequestForBulkWhenInvalid() throws Exception {
         BulkShortenRequest request = new BulkShortenRequest();
         ShortenRequest sr = new ShortenRequest();
         sr.setOriginalUrl("invalid");
@@ -136,7 +140,7 @@ public class UrlControllerTest {
     }
 
     @Test
-    public void testGetAnalytics() throws Exception {
+    public void shouldReturnClickCountForAnalytics() throws Exception {
         when(urlService.getClickCount("abc")).thenReturn(5);
 
         mockMvc.perform(get("/api/analytics/abc"))
@@ -145,9 +149,19 @@ public class UrlControllerTest {
     }
 
     @Test
-    public void testGetQRCode() throws Exception {
+    public void shouldReturnQRCodeImage() throws Exception {
         mockMvc.perform(get("/api/qr/abc"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.IMAGE_PNG));
+    }
+
+    @Test
+    public void shouldReturnInternalServerErrorWhenQRCodeFails() throws Exception {
+        try (MockedConstruction<QRCodeWriter> mocked = Mockito.mockConstruction(QRCodeWriter.class, (mock, context) -> {
+            when(mock.encode(anyString(), any(), anyInt(), anyInt())).thenThrow(new WriterException("Test exception"));
+        })) {
+            mockMvc.perform(get("/api/qr/abc"))
+                    .andExpect(status().isInternalServerError());
+        }
     }
 }

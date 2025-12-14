@@ -6,6 +6,7 @@ import com.shortscale.repository.RedisUrlRepository;
 import com.shortscale.util.HashGenerator;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
@@ -84,6 +85,7 @@ public class UrlService {
         return urlMapping.getOriginalUrl();
     }
 
+    @Cacheable(value = "urlMappings", key = "#shortCode")
     public int getClickCount(String shortCode) {
         UrlMapping urlMapping = repository.findByShortCode(shortCode);
         return urlMapping != null ? urlMapping.getClickCount() : 0;

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class HashGeneratorTest {
 
     @Test
-    public void testGenerateShortCode() {
+    public void shouldGenerateUniqueShortCodes() {
         HashGenerator generator = new HashGenerator();
         String code1 = generator.generateShortCode();
         String code2 = generator.generateShortCode();
@@ -18,7 +18,7 @@ public class HashGeneratorTest {
     }
 
     @Test
-    public void testEncodeSpecificValues() {
+    public void shouldEncodeNumbersCorrectlyToBase62() {
         HashGenerator generator = new HashGenerator();
         // Since counter starts at 1, first call is 1 -> "1"
         assertEquals("1", generator.generateShortCode());

@@ -49,14 +49,14 @@ public class UrlController {
     @PostMapping(&quot;/shorten/bulk&quot;)
     public ResponseEntity&lt;BulkShortenResponse&gt; bulkShortenUrls(@RequestBody BulkShortenRequest request, HttpServletRequest httpRequest) {
 <span class="fc" id="L51">        String clientIp = httpRequest.getRemoteAddr();</span>
-<span class="pc bpc" id="L52" title="1 of 2 branches missed.">        if (!rateLimiter.isAllowed(clientIp)) {</span>
-<span class="nc" id="L53">            return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).build();</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        if (!rateLimiter.isAllowed(clientIp)) {</span>
+<span class="fc" id="L53">            return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).build();</span>
         }
         try {
 <span class="fc" id="L56">            BulkShortenResponse response = urlService.bulkShortenUrls(request);</span>
 <span class="fc" id="L57">            return ResponseEntity.ok(response);</span>
-<span class="nc" id="L58">        } catch (IllegalArgumentException e) {</span>
-<span class="nc" id="L59">            return ResponseEntity.badRequest().build();</span>
+<span class="fc" id="L58">        } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L59">            return ResponseEntity.badRequest().build();</span>
         }
     }
 
@@ -78,8 +78,8 @@ public class UrlController {
 <span class="fc" id="L78">            byte[] qrCodeImage = byteArrayOutputStream.toByteArray();</span>
 
 <span class="fc" id="L80">            return ResponseEntity.ok(qrCodeImage);</span>
-<span class="nc" id="L81">        } catch (WriterException | IOException e) {</span>
-<span class="nc" id="L82">            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();</span>
+<span class="fc" id="L81">        } catch (WriterException | IOException e) {</span>
+<span class="fc" id="L82">            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();</span>
         }
     }
 }

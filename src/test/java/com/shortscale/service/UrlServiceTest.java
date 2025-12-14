@@ -48,7 +48,7 @@ public class UrlServiceTest {
     private RedisConnectionFactory redisConnectionFactory;
 
     @Test
-    public void testShortenUrl() {
+    public void shouldShortenUrlWithCustomCode() {
         ShortenRequest request = new ShortenRequest();
         request.setOriginalUrl("https://example.com");
         request.setCustomShortCode("abc123");
@@ -67,14 +67,14 @@ public class UrlServiceTest {
     }
 
     @Test
-    public void testGetOriginalUrl() {
+    public void shouldReturnNullWhenShortCodeNotFound() {
         Mockito.when(repository.findByShortCode("abc123")).thenReturn(null);
         String originalUrl = urlService.getOriginalUrl("abc123");
         assertNull(originalUrl);
     }
 
     @Test
-    public void testShortenUrlCustomCodeExists() {
+    public void shouldThrowExceptionWhenCustomShortCodeExists() {
         ShortenRequest request = new ShortenRequest();
         request.setOriginalUrl("https://example.com");
         request.setCustomShortCode("abc123");
@@ -85,7 +85,7 @@ public class UrlServiceTest {
     }
 
     @Test
-    public void testShortenUrlWithTtl() {
+    public void shouldSetExpirationWhenTtlProvided() {
         ShortenRequest request = new ShortenRequest();
         request.setOriginalUrl("https://example.com");
         request.setCustomShortCode("abc123");
@@ -102,7 +102,7 @@ public class UrlServiceTest {
     }
 
     @Test
-    public void testShortenUrlWithTtlZero() {
+    public void shouldNotSetExpirationWhenTtlIsZero() {
         ShortenRequest request = new ShortenRequest();
         request.setOriginalUrl("https://example.com");
         request.setCustomShortCode("abc123");
@@ -119,7 +119,7 @@ public class UrlServiceTest {
     }
 
     @Test
-    public void testShortenUrlWithoutCustomCode() {
+    public void shouldGenerateShortCodeWhenNotProvided() {
         ShortenRequest request = new ShortenRequest();
         request.setOriginalUrl("https://example.com");
         // no customShortCode
@@ -139,7 +139,7 @@ public class UrlServiceTest {
     }
 
     @Test
-    public void testGetOriginalUrlExpired() {
+    public void shouldReturnNullWhenUrlExpired() {
         UrlMapping urlMapping = new UrlMapping();
         urlMapping.setOriginalUrl("https://example.com");
         urlMapping.setExpiresAt(LocalDateTime.now().minusSeconds(1)); // expired
@@ -151,7 +151,7 @@ public class UrlServiceTest {
     }
 
     @Test
-    public void testGetOriginalUrlValid() {
+    public void shouldReturnOriginalUrlAndIncrementClickCount() {
         UrlMapping urlMapping = new UrlMapping();
         urlMapping.setOriginalUrl("https://example.com");
         urlMapping.setClickCount(5);
@@ -167,7 +167,7 @@ public class UrlServiceTest {
     }
 
     @Test
-    public void testGetClickCount() {
+    public void shouldReturnClickCount() {
         UrlMapping urlMapping = new UrlMapping();
         urlMapping.setClickCount(10);
 
@@ -178,15 +178,15 @@ public class UrlServiceTest {
     }
 
     @Test
-    public void testGetClickCountNotFound() {
-        Mockito.when(repository.findByShortCode("abc123")).thenReturn(null);
+    public void shouldReturnZeroWhenShortCodeNotFound() {
+        Mockito.when(repository.findByShortCode("nonexistent")).thenReturn(null);
 
-        int clickCount = urlService.getClickCount("abc123");
+        int clickCount = urlService.getClickCount("nonexistent");
         assertEquals(0, clickCount);
     }
 
     @Test
-    public void testBulkShortenUrls() {
+    public void shouldHandleBulkShortenRequests() {
         BulkShortenRequest bulkRequest = new BulkShortenRequest();
         ShortenRequest req1 = new ShortenRequest();
         req1.setOriginalUrl("https://example1.com");

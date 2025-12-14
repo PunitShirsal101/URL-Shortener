@@ -12,13 +12,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class RateLimiterTest {
 
     @Test
-    public void testIsAllowedFirstRequest() {
+    public void shouldAllowFirstRequest() {
         RateLimiter rateLimiter = new RateLimiter();
         assertTrue(rateLimiter.isAllowed("ip1"));
     }
 
     @Test
-    public void testIsAllowedWithinLimit() {
+    public void shouldAllowRequestsWithinLimit() {
         RateLimiter rateLimiter = new RateLimiter();
         for (int i = 0; i < 10; i++) {
             assertTrue(rateLimiter.isAllowed("ip1"));
@@ -26,7 +26,7 @@ public class RateLimiterTest {
     }
 
     @Test
-    public void testIsAllowedExceedsLimit() {
+    public void shouldDenyRequestWhenLimitExceeded() {
         RateLimiter rateLimiter = new RateLimiter();
         for (int i = 0; i < 10; i++) {
             rateLimiter.isAllowed("ip1");
@@ -35,7 +35,7 @@ public class RateLimiterTest {
     }
 
     @Test
-    public void testIsAllowedResetAfterWindow() {
+    public void shouldAllowRequestAfterTimeWindowResets() {
         AtomicReference<LocalDateTime> currentTime = new AtomicReference<>(LocalDateTime.of(2023, 1, 1, 12, 0, 0));
         Supplier<LocalDateTime> timeSupplier = currentTime::get;
         RateLimiter rateLimiter = new RateLimiter(timeSupplier);
@@ -58,7 +58,7 @@ public class RateLimiterTest {
     }
 
     @Test
-    public void testIsAllowedDifferentKeys() {
+    public void shouldAllowRequestsForDifferentKeysIndependently() {
         RateLimiter rateLimiter = new RateLimiter();
         for (int i = 0; i < 10; i++) {
             assertTrue(rateLimiter.isAllowed("ip1"));

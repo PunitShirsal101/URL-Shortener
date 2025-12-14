@@ -42,7 +42,46 @@ public class RedisUrlRepositoryTest {
     private RedisUrlRepository repository;
 
     @Test
-    public void testSaveAndFind() {
+    public void shouldSaveUrlMapping() {
+        UrlMapping urlMapping = new UrlMapping();
+        urlMapping.setId(1L);
+        urlMapping.setShortCode("abc");
+        urlMapping.setOriginalUrl("https://example.com");
+
+        repository.save(urlMapping);
+
+        //Mockito.verify(redisTemplate).opsForHash();
+    }
+
+    @Test
+    public void shouldFindUrlMappingByShortCode() {
+        UrlMapping urlMapping = new UrlMapping();
+        urlMapping.setId(1L);
+        urlMapping.setShortCode("abc");
+        urlMapping.setOriginalUrl("https://example.com");
+
+        repository.save(urlMapping);
+
+        UrlMapping result = repository.findByShortCode("abc");
+        assertNotNull(result);
+        assertEquals("https://example.com", result.getOriginalUrl());
+    }
+
+    @Test
+    public void shouldCheckIfShortCodeExists() {
+        UrlMapping urlMapping = new UrlMapping();
+        urlMapping.setId(1L);
+        urlMapping.setShortCode("abc");
+        urlMapping.setOriginalUrl("https://example.com");
+
+        repository.save(urlMapping);
+
+        boolean exists = repository.existsByShortCode("abc");
+        assertTrue(exists);
+    }
+
+    @Test
+    public void shouldSaveAndRetrieveUrlMapping() {
         UrlMapping mapping = new UrlMapping();
         mapping.setShortCode("test123");
         mapping.setOriginalUrl("https://example.com");
@@ -58,7 +97,7 @@ public class RedisUrlRepositoryTest {
     }
 
     @Test
-    public void testExists() {
+    public void shouldCheckExistenceOfShortCode() {
         assertFalse(repository.existsByShortCode("nonexistent"));
 
         UrlMapping mapping = new UrlMapping();

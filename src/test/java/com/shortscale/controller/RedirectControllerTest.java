@@ -22,16 +22,16 @@ public class RedirectControllerTest {
     private UrlService urlService;
 
     @Test
-    public void testRedirectFound() throws Exception {
-        when(urlService.getOriginalUrl("abc")).thenReturn("http://example.com");
+    public void shouldRedirectToOriginalUrlWhenFound() throws Exception {
+        when(urlService.getOriginalUrl("abc")).thenReturn("https://example.com");
 
         mockMvc.perform(get("/abc"))
                 .andExpect(status().isFound())
-                .andExpect(header().string("Location", "http://example.com"));
+                .andExpect(header().string("Location", "https://example.com"));
     }
 
     @Test
-    public void testRedirectNotFound() throws Exception {
+    public void shouldReturnNotFoundWhenShortCodeNotExists() throws Exception {
         when(urlService.getOriginalUrl("abc")).thenReturn(null);
 
         mockMvc.perform(get("/abc"))
