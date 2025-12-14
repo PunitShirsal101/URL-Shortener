@@ -1,0 +1,788 @@
+{
+  "libraries": [
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-starter-web:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-starter:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-autoconfigure:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-starter-logging:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: ch.qos.logback:logback-classic:1.5.11",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: ch.qos.logback:logback-core:1.5.11",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.apache.logging.log4j:log4j-to-slf4j:2.23.1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.apache.logging.log4j:log4j-api:2.23.1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.slf4j:jul-to-slf4j:2.0.16",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: jakarta.annotation:jakarta.annotation-api:2.1.1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.yaml:snakeyaml:2.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-starter-json:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.17.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.17.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.17.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-starter-tomcat:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.31",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.31",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.31",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-web:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/6.1.14/spring-web-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-beans:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-webmvc:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-aop:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-expression:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-starter-actuator:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-actuator/3.3.5/spring-boot-starter-actuator-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator-autoconfigure/3.3.5/spring-boot-actuator-autoconfigure-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-actuator:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator/3.3.5/spring-boot-actuator-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.micrometer:micrometer-observation:1.13.6",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.micrometer:micrometer-commons:1.13.6",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.micrometer:micrometer-jakarta9:1.13.6",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-jakarta9/1.13.6/micrometer-jakarta9-1.13.6.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.micrometer:micrometer-core:1.13.6",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/micrometer/micrometer-core/1.13.6/micrometer-core-1.13.6.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.hdrhistogram:HdrHistogram:2.2.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.latencyutils:LatencyUtils:2.0.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.fasterxml.jackson.core:jackson-databind:2.17.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.fasterxml.jackson.core:jackson-annotations:2.17.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.fasterxml.jackson.core:jackson-core:2.17.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-starter-test:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/3.3.5/spring-boot-starter-test-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-test:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test/3.3.5/spring-boot-test-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-test-autoconfigure:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-test-autoconfigure/3.3.5/spring-boot-test-autoconfigure-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.jayway.jsonpath:json-path:2.9.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.slf4j:slf4j-api:2.0.16",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: jakarta.xml.bind:jakarta.xml.bind-api:4.0.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: jakarta.activation:jakarta.activation-api:2.1.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: net.minidev:json-smart:2.5.1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: net.minidev:accessors-smart:2.5.1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.ow2.asm:asm:9.6",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/9.6/asm-9.6.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.assertj:assertj-core:3.25.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.awaitility:awaitility:4.2.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.hamcrest:hamcrest:2.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.junit.jupiter:junit-jupiter:5.10.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.junit.jupiter:junit-jupiter-api:5.10.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.10.5/junit-jupiter-api-5.10.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.opentest4j:opentest4j:1.3.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.junit.platform:junit-platform-commons:1.10.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.apiguardian:apiguardian-api:1.1.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.junit.jupiter:junit-jupiter-params:5.10.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.junit.jupiter:junit-jupiter-engine:5.10.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.10.5/junit-jupiter-engine-5.10.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.junit.platform:junit-platform-engine:1.10.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.mockito:mockito-junit-jupiter:5.11.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.skyscreamer:jsonassert:1.5.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-core:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-jcl:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-test:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/6.1.14/spring-test-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.xmlunit:xmlunit-core:2.9.1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.projectlombok:lombok:1.18.42",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.google.zxing:core:3.5.1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/google/zxing/core/3.5.1/core-3.5.1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.google.zxing:javase:3.5.1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/google/zxing/javase/3.5.1/javase-3.5.1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.beust:jcommander:1.82",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/beust/jcommander/1.82/jcommander-1.82.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.github.jai-imageio:jai-imageio-core:1.4.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/github/jai-imageio/jai-imageio-core/1.4.0/jai-imageio-core-1.4.0.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.mockito:mockito-core:5.7.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: net.bytebuddy:byte-buddy:1.14.19",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: net.bytebuddy:byte-buddy-agent:1.14.19",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.objenesis:objenesis:3.3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/3.3/objenesis-3.3.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-starter-data-redis:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-data-redis/3.3.5/spring-boot-starter-data-redis-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.lettuce:lettuce-core:6.3.2.RELEASE",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/lettuce/lettuce-core/6.3.2.RELEASE/lettuce-core-6.3.2.RELEASE.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.netty:netty-common:4.1.114.Final",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/netty/netty-common/4.1.114.Final/netty-common-4.1.114.Final.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.netty:netty-handler:4.1.114.Final",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/netty/netty-handler/4.1.114.Final/netty-handler-4.1.114.Final.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.netty:netty-resolver:4.1.114.Final",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/netty/netty-resolver/4.1.114.Final/netty-resolver-4.1.114.Final.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.netty:netty-buffer:4.1.114.Final",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/netty/netty-buffer/4.1.114.Final/netty-buffer-4.1.114.Final.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.netty:netty-transport-native-unix-common:4.1.114.Final",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/netty/netty-transport-native-unix-common/4.1.114.Final/netty-transport-native-unix-common-4.1.114.Final.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.netty:netty-codec:4.1.114.Final",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/netty/netty-codec/4.1.114.Final/netty-codec-4.1.114.Final.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.netty:netty-transport:4.1.114.Final",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.114.Final/netty-transport-4.1.114.Final.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: io.projectreactor:reactor-core:3.6.11",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/io/projectreactor/reactor-core/3.6.11/reactor-core-3.6.11.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.reactivestreams:reactive-streams:1.0.4",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.data:spring-data-redis:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/3.3.5/spring-data-redis-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.data:spring-data-keyvalue:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-keyvalue/3.3.5/spring-data-keyvalue-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.data:spring-data-commons:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/3.3.5/spring-data-commons-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-oxm:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-oxm/6.1.14/spring-oxm-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-context-support:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/6.1.14/spring-context-support-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.boot:spring-boot-starter-websocket:3.3.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-websocket/3.3.5/spring-boot-starter-websocket-3.3.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-messaging:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/6.1.14/spring-messaging-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-websocket:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/6.1.14/spring-websocket-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.kafka:spring-kafka:3.2.4",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/kafka/spring-kafka/3.2.4/spring-kafka-3.2.4.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-context:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework:spring-tx:6.1.14",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.springframework.retry:spring-retry:2.0.10",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/springframework/retry/spring-retry/2.0.10/spring-retry-2.0.10.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.apache.kafka:kafka-clients:3.7.1",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/3.7.1/kafka-clients-3.7.1.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.github.luben:zstd-jni:1.5.6-3",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/github/luben/zstd-jni/1.5.6-3/zstd-jni-1.5.6-3.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.lz4:lz4-java:1.8.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.xerial.snappy:snappy-java:1.1.10.5",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/xerial/snappy/snappy-java/1.1.10.5/snappy-java-1.1.10.5.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.testcontainers:junit-jupiter:1.19.8",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/testcontainers/junit-jupiter/1.19.8/junit-jupiter-1.19.8.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.testcontainers:testcontainers:1.19.8",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/testcontainers/testcontainers/1.19.8/testcontainers-1.19.8.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: junit:junit:4.13.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.hamcrest:hamcrest-core:2.2",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.apache.commons:commons-compress:1.24.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.rnorth.duct-tape:duct-tape:1.0.8",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: org.jetbrains:annotations:17.0.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.github.docker-java:docker-java-api:3.3.6",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/github/docker-java/docker-java-api/3.3.6/docker-java-api-3.3.6.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.github.docker-java:docker-java-transport-zerodep:3.3.6",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/github/docker-java/docker-java-transport-zerodep/3.3.6/docker-java-transport-zerodep-3.3.6.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: com.github.docker-java:docker-java-transport:3.3.6",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/com/github/docker-java/docker-java-transport/3.3.6/docker-java-transport-3.3.6.jar!/"
+      ],
+      "properties": {}
+    },
+    {
+      "name": "Maven: net.java.dev.jna:jna:5.13.0",
+      "roots": [
+        "jar://$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar!/"
+      ],
+      "properties": {}
+    }
+  ]
+}

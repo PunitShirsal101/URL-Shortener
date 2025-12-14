@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "total": 0,
+  "tools inspection": {
+    "Code Inspection": 0
+  },
+  "linter": "QDJVMC",
+  "attributes": {
+    "deviceId": "200820300000000-e949-6425-1221-32a2b8aac008",
+    "jobUrl": "",
+    "vcs": {
+      "sarifIdea": {
+        "repositoryUri": "https://github.com/PunitShirsal101/URL-Shortener.git",
+        "revisionId": "3fe0287cbb76087e38725efd5970846f8df29bbb",
+        "branch": "master"
+      }
+    },
+    "repoUrl": "https://github.com/PunitShirsal101/URL-Shortener.git"
+  },
+  "linterVersion": "243.25515"
+}

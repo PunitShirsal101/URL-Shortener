@@ -1,0 +1,8 @@
+{
+  "modules": [
+    {
+      "name": "url-shortener",
+      "languageLevel": 17
+    }
+  ]
+}

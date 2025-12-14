@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'shortscale'
+    static_configs:
+      - targets: ['shortscale:8080']

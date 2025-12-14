@@ -1,0 +1,76 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "URL Shortener Dashboard",
+    "tags": ["url-shortener"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "URLs Shortened",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "url_shortened_total",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 2,
+        "title": "URLs Clicked",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "url_clicked_total",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "blue",
+                  "value": null
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "templating": {
+      "list": []
+    },
+    "annotations": {
+      "list": []
+    },
+    "refresh": "5s",
+    "schemaVersion": 27,
+    "version": 0,
+    "links": []
+  }
+}
+

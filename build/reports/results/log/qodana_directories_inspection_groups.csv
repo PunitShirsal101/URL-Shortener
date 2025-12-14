@@ -1,0 +1,25 @@
+Directory;Absolute Time spent on Inspection Group 'all', s;Percent of Time spent on Inspection Group 'all';Inspections Problem Count in Group 'all';Times Inspection from Group 'all' was Performed
+/data/project;4.89;100.00%;0;4055
+/data/project/src/main;3.96;80.99%;0;3936
+/data/project/src/main/java/com/shortscale;3.96;80.99%;0;3935
+/data/project/src/main/java/com/shortscale/service;1.10;22.50%;0;461
+/data/project/src/main/java/com/shortscale/service/impl;1.10;22.48%;0;231
+/data/project/src/main/java/com/shortscale/controller;0.63;12.86%;0;467
+/data/project/src/main/java/com/shortscale/api/dto;0.53;10.82%;0;1160
+/data/project/src/main/java/com/shortscale/config;0.52;10.58%;0;460
+/data/project/src/main/java/com/shortscale/util;0.35;7.08%;0;463
+/data/project/src/main/java/com/shortscale/analytics;0.19;3.89%;0;232
+/data/project/src/main/java/com/shortscale/repository;0.10;2.09%;0;229
+/data/project/src/main/java/com/shortscale/model;0.00;0.05%;0;230
+/data/project/src/main/resources;0.00;0.00%;0;1
+/data/project/results/log;0.82;16.79%;0;89
+/data/project/results/log/indexing-diagnostic;0.81;16.65%;0;63
+/data/project/results/log/indexing-diagnostic/project.15375f63;0.18;3.59%;0;61
+/data/project/results/log/qodana;0.00;0.00%;0;1
+/data/project/prometheus;0.00;0.00%;0;1
+/data/project/load-test;0.00;0.00%;0;5
+/data/project/grafana/provisioning;0.00;0.00%;0;3
+/data/project/grafana/provisioning/datasources;0.00;0.00%;0;2
+/data/project/grafana/provisioning/dashboards;0.00;0.00%;0;1
+/data/project/.github/workflows;0.00;0.00%;0;3
+/data/project/docs;0.00;0.00%;0;5

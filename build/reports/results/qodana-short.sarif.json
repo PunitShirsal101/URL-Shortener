@@ -1,0 +1,65 @@
+{
+  "$schema": "https://raw.githubusercontent.com/schemastore/schemastore/master/src/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "QDJVMC",
+          "fullName": "Qodana Community for JVM",
+          "version": "243.25515",
+          "rules": [],
+          "taxa": [],
+          "language": "en-US",
+          "contents": [
+            "localizedData",
+            "nonLocalizedData"
+          ],
+          "isComprehensive": false
+        },
+        "extensions": []
+      },
+      "invocations": [
+        {
+          "startTimeUtc": "2025-12-13T18:01:55.842004326Z",
+          "exitCode": 0,
+          "executionSuccessful": true
+        }
+      ],
+      "language": "en-US",
+      "versionControlProvenance": [
+        {
+          "repositoryUri": "https://github.com/PunitShirsal101/URL-Shortener.git",
+          "revisionId": "3fe0287cbb76087e38725efd5970846f8df29bbb",
+          "branch": "master",
+          "properties": {
+            "repoUrl": "https://github.com/PunitShirsal101/URL-Shortener.git",
+            "lastAuthorName": "PunitShirsal101",
+            "vcsType": "Git",
+            "lastAuthorEmail": "sutarpunit101@gmail.com"
+          }
+        }
+      ],
+      "results": [],
+      "automationDetails": {
+        "id": "project/qodana/2025-12-13",
+        "guid": "ccf3c63f-37cc-4428-98e1-73501be06116",
+        "properties": {
+          "jobUrl": "",
+          "analysisKind": "regular"
+        }
+      },
+      "newlineSequences": [
+        "\r\n",
+        "\n"
+      ],
+      "properties": {
+        "configProfile": "starter",
+        "deviceId": "200820300000000-e949-6425-1221-32a2b8aac008",
+        "qodanaNewResultSummary": {
+          "total": 0
+        }
+      }
+    }
+  ]
+}

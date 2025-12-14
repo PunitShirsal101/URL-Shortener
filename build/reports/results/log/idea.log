@@ -1,0 +1,716 @@
+2025-12-13 18:01:44,536 [     10]   INFO - #c.i.p.i.b.AppStarter - ------------------------------------------------------ IDE STARTED ------------------------------------------------------
+2025-12-13 18:01:44,536 [     10]   INFO - #c.i.i.p.PluginManager - Plugin PluginDescriptor(name=Groovy, id=org.intellij.groovy, descriptorPath=plugin.xml, path=/opt/idea/plugins/Groovy, version=243.25515, package=org.jetbrains.plugins.groovy, isBundled=true) misses optional descriptor duplicates-groovy.xml
+2025-12-13 18:01:44,578 [     52]   INFO - #c.i.i.p.PluginManager - Plugin PluginDescriptor(name=Groovy, id=org.intellij.groovy, descriptorPath=plugin.xml, path=/opt/idea/plugins/Groovy, version=243.25515, package=org.jetbrains.plugins.groovy, isBundled=true) misses optional descriptor duplicates-detection-groovy.xml
+2025-12-13 18:01:44,621 [     95]   INFO - #c.i.p.i.b.AppStarter - JNA library (64-bit) loaded in 35 ms
+2025-12-13 18:01:44,625 [     99]   INFO - #c.i.p.i.b.AppStarter - IDE: Qodana Community for JVM (build #QDJVMC-243.25515, Sat, 13 Dec 2025 18:01:44 GMT)
+2025-12-13 18:01:44,626 [    100]   INFO - #c.i.p.i.b.AppStarter - OS: Linux (6.6.87.2-microsoft-standard-wsl2)
+2025-12-13 18:01:44,630 [    104]   INFO - #c.i.p.i.b.AppStarter - JRE: 21.0.6+8-b631.39, amd64 (JetBrains s.r.o.)
+2025-12-13 18:01:44,631 [    105]   INFO - #c.i.p.i.b.AppStarter - JVM: 21.0.6+8-b631.39 (OpenJDK 64-Bit Server VM)
+2025-12-13 18:01:44,636 [    110]   INFO - #c.i.p.i.b.AppStarter - PID: 22
+2025-12-13 18:01:44,637 [    111]   INFO - #c.i.p.i.b.AppStarter - desktop: null
+2025-12-13 18:01:44,638 [    112]   INFO - #c.i.p.i.b.AppStarter - toolkit: sun.awt.HeadlessToolkit
+2025-12-13 18:01:44,660 [    134]   INFO - #c.i.p.i.b.AppStarter - JVM options: [abort, vfprintf, -XX:ErrorFile=/root/java_error_in_idea_%p.log, -XX:HeapDumpPath=/root/java_error_in_idea.hprof, -Xms128m, -XX:ReservedCodeCacheSize=512m, -XX:+HeapDumpOnOutOfMemoryError, -XX:-OmitStackTraceInFastThrow, -XX:CICompilerCount=2, -XX:+IgnoreUnrecognizedVMOptions, -ea, -Dsun.io.useCanonCaches=false, -Dsun.java2d.metal=true, -Djbr.catch.SIGABRT=true, -Djdk.http.auth.tunneling.disabledSchemes="", -Djdk.attach.allowAttachSelf=true, -Djdk.module.illegalAccess.silent=true, -Djdk.nio.maxCachedBufferSize=2097152, -Djava.util.zip.use.nio.for.zip.file.access=true, -Dkotlinx.coroutines.debug=off, -XX:+UnlockDiagnosticVMOptions, -XX:TieredOldPercentage=100000, -Dllm.show.ai.promotion.window.on.start=false, -Dintellij.plugins.custom.built.in.repository.url=https://buildserver.labs.intellij.net/guestAuth/repository/download/ijplatform_IjPlatform243_IdeaCommunityInstallersBuild/650463227:id/IC-plugins/plugins.xml, -Dsun.tools.attach.tmp.only=true, -Dawt.lock.fair=true, -Djava.awt.headless=true, -Didea.log.path=/mnt/agent/work/99c5b61989d35d4f/logs/plugins/, -Didea.config.path=/root/.config/idea, -Didea.headless.enable.statistics=true, -Didea.headless.statistics.device.id=200820300000000-e949-6425-1221-32a2b8aac008, -Didea.headless.statistics.salt=8f17b122820264b07e09c8d10676bad3, -Didea.log.path=/data/results/log, -Didea.plugins.path=/data/cache/plugins/243, -Didea.system.path=/data/cache/idea/243, -Dplugin.path=/opt/idea/custom-plugins/devkit,/opt/idea/custom-plugins/lombok, -Dqodana.automation.guid=ccf3c63f-37cc-4428-98e1-73501be06116, -Dqodana.coverage.input=/data/coverage, -XX:MaxRAMPercentage=70, -Xlog:gc*:/data/results/log/gc.log, -Djb.vmOptionsFile=/root/.config/idea/ide.vmoptions, -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader, -Didea.vendor.name=JetBrains, -Didea.paths.selector=IdeaIC2024.3, -Djna.boot.library.path=/opt/idea/lib/jna/amd64, -Dpty4j.preferred.native.folder=/opt/idea/lib/pty4j, -Djna.nosys=true, -Djna.noclasspath=true, -Dintellij.platform.runtime.repository.path=/opt/idea/modules/module-descriptors.jar, -Didea.platform.prefix=Idea, -Dsplash=true, -Daether.connector.resumeDownloads=false, -Dcompose.swing.render.on.graphics=true, --add-opens=java.base/java.io=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.ref=ALL-UNNAMED, --add-opens=java.base/java.lang.reflect=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.text=ALL-UNNAMED, --add-opens=java.base/java.time=ALL-UNNAMED, --add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED, --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED, --add-opens=java.base/sun.net.dns=ALL-UNNAMED, --add-opens=java.base/sun.nio.ch=ALL-UNNAMED, --add-opens=java.base/sun.nio.fs=ALL-UNNAMED, --add-opens=java.base/sun.security.ssl=ALL-UNNAMED, --add-opens=java.base/sun.security.util=ALL-UNNAMED, --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED, --add-opens=java.desktop/com.sun.java.swing.plaf.gtk=ALL-UNNAMED, --add-opens=java.desktop/java.awt=ALL-UNNAMED, --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/java.awt.font=ALL-UNNAMED, --add-opens=java.desktop/java.awt.image=ALL-UNNAMED, --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED, --add-opens=java.desktop/sun.awt=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED, --add-opens=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.java2d=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.management/sun.management=ALL-UNNAMED, --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED, --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED, --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED, -Dqodana.application=true, -Dintellij.platform.load.app.info.from.resources=true, -Dfus.internal.reduce.initial.delay=true, -Didea.headless.statistics.max.files.to.send=5000, -Djava.awt.headless=true, -Didea.qodana.thirdpartyplugins.accept=true, -Dide.warmup.use.predicates=false, -Dvcs.log.index.enable=false, -Didea.job.launcher.without.timeout=true, -Dscanning.in.smart.mode=false, -Deap.login.enabled=false, -Dsdk.download.consent=true, -Deslint.service.expiration.timeout.ms=5000, -Dphp.additional.library.manager.new.updater=true, -Dqodana.product.name=Qodana Community for JVM, -Dqodana.build.number=QDJVMC-243.25515, -Dqodana.eap=false, -Dide.native.launcher=true]
+2025-12-13 18:01:44,662 [    136]   INFO - #c.i.p.i.b.AppStarter - args: qodana . /data/results
+2025-12-13 18:01:44,663 [    137]   INFO - #c.i.p.i.b.AppStarter - library path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+2025-12-13 18:01:44,663 [    137]   INFO - #c.i.p.i.b.AppStarter - boot library path: /opt/idea/jbr/lib
+2025-12-13 18:01:44,675 [    149]   INFO - #c.i.p.i.b.AppStarter - locale=en_US JNU=UTF-8 file.encoding=UTF-8
+    idea.config.path=/root/.config/idea
+    idea.system.path=/data/cache/idea/243
+    idea.plugins.path=/data/cache/plugins/243 -> java.nio.file.NoSuchFileException: /data/cache/plugins/243
+    idea.log.path=/data/results/log
+2025-12-13 18:01:44,685 [    159]   INFO - #c.i.p.i.b.AppStarter - CPU cores: 16; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@29116a76[Running, parallelism = 16, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@7c95c401
+2025-12-13 18:01:44,736 [    210]   INFO - #c.i.i.p.PluginManager - Module intellij.platform.images.backend.svg is not enabled because dependency com.intellij.platform.images is not available
+Module intellij.platform.images.copyright is not enabled because dependency com.intellij.platform.images is not available
+Module intellij.properties/copyright is not enabled because dependency com.intellij.copyright is not available
+Module intellij.vcs.git/terminal is not enabled because dependency org.jetbrains.plugins.terminal is not available
+Module kotlin.performanceExtendedPlugin is not enabled because dependency intellij.performanceTesting.vcs is not available
+Module kotlin.copyright is not enabled because dependency com.intellij.copyright is not available
+Module kotlin.ml-completion is not enabled because dependency com.intellij.completion.ml.ranking is not available
+Module kotlin.grazie is not enabled because dependency tanvd.grazi is not available
+Module kotlin.coverage is not enabled because dependency Coverage is not available
+Module kotlin.jvm-debugger.sequence.k1 is not enabled because dependency org.jetbrains.debugger.streams is not available
+Module kotlin.jvm-decompiler is not enabled because dependency org.jetbrains.java.decompiler is not available
+Module intellij.devkit.uiDesigner is not enabled because dependency com.intellij.uiDesigner is not available
+Module intellij.devkit.images is not enabled because dependency com.intellij.platform.images is not available
+Module intellij.java.terminal is not enabled because dependency org.jetbrains.plugins.terminal is not available
+Module intellij.java.performancePlugin is not enabled because dependency intellij.performanceTesting.vcs is not available
+Module intellij.java.featuresTrainer is not enabled because dependency training is not available
+Module kotlin.features-trainer is not enabled because dependency intellij.java.featuresTrainer is not available
+Module intellij.kotlin.onboarding-promoter is not enabled because dependency kotlin.features-trainer is not available
+Module intellij.qodana.jvm.swagger is not enabled because dependency com.intellij.swagger is not available
+Module intellij.qodana.inspectionKts.js is not enabled because dependency JavaScript is not available
+Module intellij.qodana.jvm.coverage is not enabled because dependency Coverage is not available
+Module intellij.qodana.python is not enabled because dependency intellij.python is not available
+Module intellij.qodana.php is not enabled because dependency com.jetbrains.php is not available
+Module intellij.qodana.js is not enabled because dependency JavaScript is not available
+Module intellij.qodana.go is not enabled because dependency intellij.go.coverage is not available
+Module intellij.qodana/yaml is not enabled because dependency org.jetbrains.plugins.yaml is not available
+Module intellij.groovy/byte-code-viewer is not enabled because dependency ByteCodeViewer is not available
+Module intellij.groovy/ant is not enabled because dependency AntSupport is not available
+Module kotlin.gradle.code-insight-toml is not enabled because dependency org.toml.lang is not available
+Module kotlin.project-wizard.gradle is not enabled because dependency org.toml.lang is not available
+Module intellij.java.ide.customization/training is not enabled because dependency training is not available
+2025-12-13 18:01:44,761 [    235]   INFO - #c.i.i.p.PluginManager - Loaded bundled plugins: IDEA CORE (243.25515), JSON (243.25515), EditorConfig (243.25515), JetBrains maven model api classes (243.25515), JetBrains Repository Search (243.25515), Maven server api classes (243.25515), Mercurial (243.25515), Properties (243.25515), Gradle (243.25515), com.intellij.dev (243.25515), Git (243.25515), Configuration Script (243.25515), Kotlin (243.25515-IJ), Java (243.25515), IntelliLang (243.25515), Qodana (243.25515), Java Internationalization (243.25515), JUnit (243.25515), Groovy (243.25515), Maven (243.25515), TestNG (243.25515), Gradle-Java (243.25515), Eclipse Interoperability (243.25515), Java IDE Customization (243.25515)
+2025-12-13 18:01:44,762 [    236]   INFO - #c.i.i.p.PluginManager - Loaded custom plugins: Plugin DevKit (243.25515), Lombok (243.25515)
+2025-12-13 18:01:44,762 [    236]   INFO - #c.i.i.p.PluginManager - Disabled plugins: Code With Me (243.25515)
+2025-12-13 18:01:44,920 [    394]   INFO - #o.j.q.s.i.s.QodanaApplicationStarter - Command line arguments: [qodana, ., /data/results]
+2025-12-13 18:01:44,946 [    420]   INFO - c.i.p.i.IdeFingerprint - Calculated dependencies fingerprint in 24 ms (hash=12rpsx8apwfid, buildTime=1765648904, appVersion=QDJVMC-243.25515)
+2025-12-13 18:01:45,049 [    523]   INFO - #c.i.u.s.JBUIScale - System scale factor: 1.0 (IDE-managed HiDPI)
+2025-12-13 18:01:45,137 [    611]   INFO - #c.i.i.OsDataLogger - Debian GNU/Linux 11 (bullseye) (in WSL); glibc: 2.31
+2025-12-13 18:01:45,147 [    621]   INFO - #c.i.a.o.PathMacrosImpl - Loaded path macros: {MAVEN_REPOSITORY=/data/cache/.m2}
+2025-12-13 18:01:45,165 [    639]   INFO - #c.i.i.p.ExpiredPluginsState - Plugins to skip: []
+2025-12-13 18:01:45,280 [    754]   INFO - #c.i.u.i.PageCacheUtils - File page caching params:
+2025-12-13 18:01:45,281 [    755]   INFO - #c.i.u.i.PageCacheUtils - 	DEFAULT_PAGE_SIZE: 10485760
+2025-12-13 18:01:45,282 [    756]   INFO - #c.i.u.i.PageCacheUtils - 	Direct memory to use, max: 5565841408
+2025-12-13 18:01:45,286 [    760]   INFO - #c.i.u.i.PageCacheUtils - 	FilePageCache: regular + lock-free (LOCK_FREE_PAGE_CACHE_ENABLED:true)
+2025-12-13 18:01:45,288 [    762]   INFO - #c.i.u.i.PageCacheUtils - 	NEW_PAGE_CACHE_MEMORY_FRACTION: 0.20000000298023224
+2025-12-13 18:01:45,289 [    763]   INFO - #c.i.u.i.PageCacheUtils - 	Regular FilePageCache: 503316478 bytes
+2025-12-13 18:01:45,289 [    763]   WARN - c.i.o.u.r.overrides - Conflicting registry key definition for key kotlin.mpp.tests.force.gradle: it was defined by plugin org.jetbrains.kotlin but redefined by plugin org.jetbrains.kotlin. Consider adding overrides="true" for one of the plugins, see the documentation for com.intellij.openapi.util.registry.RegistryKeyBean.overrides for more details.
+2025-12-13 18:01:45,290 [    764]   INFO - #c.i.u.i.PageCacheUtils - 	New     FilePageCache: 125829122 bytes (+ up to 10.0% overflow)
+2025-12-13 18:01:45,294 [    768]   INFO - #c.i.u.i.PageCacheUtils - 	DirectByteBuffers pool: 104857600 bytes
+2025-12-13 18:01:45,332 [    806]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses names enumerator over mmapped file
+2025-12-13 18:01:45,333 [    807]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses streamlined attributes storage (over mmapped file)
+2025-12-13 18:01:45,335 [    809]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses OverMMappedFile(pageSize=67108864, acquireStorageOwnership=true) storage for main file records table
+2025-12-13 18:01:45,336 [    810]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses content storage over memory-mapped file, with compression algo: LZ4[ > 8000b ]
+2025-12-13 18:01:45,570 [   1044]   INFO - #c.i.u.i.c.d.IndexWriter - Use com.intellij.util.indexing.contentQueue.dev.MultiThreadedWithSuspendIndexWriter@491b661b as (parallel) index writer implementation
+2025-12-13 18:01:45,581 [   1055]   INFO - #o.j.i.BuiltInServerManager - built-in server started, port 63342
+2025-12-13 18:01:45,587 [   1061]   INFO - #c.i.u.i.i.SlruIndexStorageCacheProvider - SLRU cache will be used for indexes
+2025-12-13 18:01:45,588 [   1062]   INFO - #c.i.u.i.i.MapIndexStorageCacheProvider$Companion - Default index storage cache provider [com.intellij.util.indexing.impl.SlruIndexStorageCacheProvider@2ce72528] is used
+2025-12-13 18:01:45,724 [   1198]   INFO - #c.i.o.a.ConfigImportHelper - [i18n] Localization property from registry is null
+2025-12-13 18:01:45,771 [   1245]   INFO - #c.i.o.v.n.p.FSRecords - VFS health-check enabled: first after 600000 ms, and each following 43200000 ms, wrap in RA: true
+2025-12-13 18:01:45,815 [   1289]   INFO - #fleet.kernel.Transactor - Duration: 82.278346ms, change from: fleet.tracing.runtime.Span$Noop@6c484271
+2025-12-13 18:01:45,980 [   1454]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS: impl (expected) version=846400, 0 file records, 0 content blobs
+2025-12-13 18:01:45,989 [   1463]   INFO - #c.i.u.n.s.CertificateManager - Default SSL context initialized
+2025-12-13 18:01:45,990 [   1464]   INFO - #c.i.o.v.n.p.FSRecordsImpl - VFS scanned: file-by-name index was populated
+2025-12-13 18:01:45,992 [   1466]   INFO - #c.i.o.v.n.p.FSRecordsImpl - VFS initialized: 736 ms, 0 failed attempts, 0 error(s) were recovered
+2025-12-13 18:01:46,011 [   1485]   INFO - #c.i.o.v.n.p.PersistentFSImpl - VFS.MAX_FILE_LENGTH_TO_CACHE: 1048576
+2025-12-13 18:01:46,047 [   1521]   INFO - #c.i.o.v.i.l.NativeFileWatcherImpl - Native file watcher is disabled
+2025-12-13 18:01:46,172 [   1646]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'Stubs' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,172 [   1646]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'TodoIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,172 [   1646]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'html5.custom.attributes.index' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,174 [   1648]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'FilenameIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,177 [   1651]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'IdIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,181 [   1655]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'FrameworkDetectionIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,182 [   1656]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'Trigram.Index' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,182 [   1656]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'fileIncludes' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,183 [   1657]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'editorconfig.index.name' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,187 [   1661]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'XmlNamespaces' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,187 [   1661]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'SchemaTypeInheritance' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,190 [   1664]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'DomFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,192 [   1666]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'json.file.root.values' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,195 [   1669]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'filetypes' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,196 [   1670]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'XmlTagNames' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,198 [   1672]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'RelaxSymbolIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,199 [   1673]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'xmlProperties' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,457 [   1931]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.auto.module.name' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,767 [   2241]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.source.module.name' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,788 [   2262]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.fun.expression' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,790 [   2264]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,815 [   2289]   INFO - o.j.q.s.i.r.cloud - QODANA_TOKEN environment variable is not defined
+2025-12-13 18:01:46,824 [   2298]   INFO - STDOUT - By using this linter, you agree to
+2025-12-13 18:01:46,825 [   2299]   INFO - STDOUT - - JetBrains Privacy Policy (https://jb.gg/jetbrains-privacy-policy)
+2025-12-13 18:01:46,826 [   2300]   INFO - STDOUT - - Qodana Community Linters Agreement (https://jb.gg/qodana-community-linters)
+2025-12-13 18:01:46,828 [   2302]   INFO - STDOUT - Qodana license plan: Community
+2025-12-13 18:01:46,837 [   2311]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,842 [   2316]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinJavaScriptMetaFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,844 [   2318]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,846 [   2320]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,849 [   2323]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.binary.plus.expression' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,851 [   2325]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'java.null.method.argument' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,853 [   2327]   WARN - org.jline - Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2025-12-13 18:01:46,852 [   2326]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'bytecodeAnalysis' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,855 [   2329]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,856 [   2330]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,857 [   2331]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,933 [   2407]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'KotlinPackageSourcesMemberNamesIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,935 [   2409]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,937 [   2411]   WARN - org.jline - Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2025-12-13 18:01:46,956 [   2430]   INFO - STDOUT -                                         
+2025-12-13 18:01:46,956 [   2430]   INFO - STDOUT -           _              _       
+2025-12-13 18:01:46,957 [   2431]   INFO - STDOUT -          /\ \           /\ \        Qodana Community for JVM 2024.3.3
+2025-12-13 18:01:46,957 [   2431]   INFO - STDOUT -         /  \ \         /  \ \       Documentation
+2025-12-13 18:01:46,958 [   2432]   INFO - STDOUT -        / /\ \ \       / /\ \ \      https://jb.gg/qodana-docs
+2025-12-13 18:01:46,958 [   2432]   INFO - STDOUT -       / / /\ \ \     / / /\ \ \     Contact us at
+2025-12-13 18:01:46,959 [   2433]   INFO - STDOUT -      / / /  \ \_\   / / /  \ \_\    qodana-support@jetbrains.com
+2025-12-13 18:01:46,959 [   2433]   INFO - STDOUT -     / / / _ / / /  / / /   / / /    Or via our issue tracker
+2025-12-13 18:01:46,959 [   2433]   INFO - STDOUT -    / / / /\ \/ /  / / /   / / /     https://jb.gg/qodana-issue
+2025-12-13 18:01:46,960 [   2434]   INFO - STDOUT -   / / /__\ \ \/  / / /___/ / /      Or share your feedback at our forum
+2025-12-13 18:01:46,960 [   2434]   INFO - STDOUT -  / / /____\ \ \ / / /____\/ /       https://jb.gg/qodana-forum
+2025-12-13 18:01:46,960 [   2434]   INFO - STDOUT -  \/________\_\/ \/_________/     
+2025-12-13 18:01:46,961 [   2435]   INFO - STDOUT -                                                    
+2025-12-13 18:01:46,961 [   2435]   INFO - STDOUT -                                         
+2025-12-13 18:01:46,963 [   2437]   INFO - STDOUT - Starting up Qodana Community for JVM 2024.3.3 (build QDJVMC-243.25515)…done.
+2025-12-13 18:01:46,991 [   2465]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'IdeaPluginRegistrationIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,993 [   2467]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'KotlinBinaryRootToPackageIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:46,994 [   2468]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'KotlinTopLevelCallableByPackageShortNameIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,001 [   2475]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'LombokConfigIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,004 [   2478]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,006 [   2480]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,012 [   2486]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,014 [   2488]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'PluginIdDependenciesIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,015 [   2489]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'devkit.ExtensionPointIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,017 [   2491]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'devkit.ExtensionPointClassIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,019 [   2493]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'org.jetbrains.kotlin.idea.vfilefinder.KlibMetaFileIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,020 [   2494]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'PluginIdModuleIndex' index (applicable providers: [default, fake-storage]) 
+2025-12-13 18:01:47,087 [   2561]   INFO - #c.i.u.i.FileBasedIndexImpl - Indices to be built:org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex(v = 3),org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex(v = 1),SchemaTypeInheritance(v = 2),java.null.method.argument(v = 1),TodoIndex(v = 13),json.file.root.values(v = 5),KotlinTopLevelCallableByPackageShortNameIndex(v = 3),org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex(v = 5),java.source.module.name(v = 4),org.jetbrains.kotlin.idea.vfilefinder.KlibMetaFileIndex(v = 4),FilenameIndex(v = 258),org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex(v = 4),IdeaPluginRegistrationIndex(v = 18),html5.custom.attributes.index(v = 1),KotlinPackageSourcesMemberNamesIndex(v = 2),java.fun.expression(v = 6),devkit.ExtensionPointClassIndex(v = 11),editorconfig.index.name(v = 5),Trigram.Index(v = 4),XmlTagNames(v = 1),DomFileIndex(v = 0),org.jetbrains.kotlin.idea.vfilefinder.KotlinJavaScriptMetaFileIndex(v = 4),org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex(v = 2),IdIndex(v = 22),XmlNamespaces(v = 8),xmlProperties(v = 2),LombokConfigIndex(v = 14),PluginIdModuleIndex(v = 12),RelaxSymbolIndex(v = 0),org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex(v = 3),fileIncludes(v = 6),bytecodeAnalysis(v = 11),org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex(v = 5),FrameworkDetectionIndex(v = 65536),java.binary.plus.expression(v = 4),org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex(v = 5),devkit.ExtensionPointIndex(v = 11),java.auto.module.name(v = 6),PluginIdDependenciesIndex(v = 15),org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex(v = 2),KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex(v = 3),KotlinBinaryRootToPackageIndex(v = 5),org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex(v = 2),filetypes(v = 4096),Stubs(v = 46)
+2025-12-13 18:01:47,092 [   2566]   INFO - #c.i.u.i.FileBasedIndexImpl - Using nice flusher for indexes
+2025-12-13 18:01:47,100 [   2574]   INFO - #c.i.u.i.IndexDataInitializer - Index data initialization done: 1070 ms. Initialized indexes: [FilenameIndex, filetypes, json.file.root.values, XmlTagNames, SchemaTypeInheritance, XmlNamespaces, html5.custom.attributes.index, RelaxSymbolIndex, DomFileIndex, xmlProperties, java.auto.module.name, editorconfig.index.name, Trigram.Index, TodoIndex, java.source.module.name, java.fun.expression, org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinJavaScriptMetaFileIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex, java.null.method.argument, java.binary.plus.expression, org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex, bytecodeAnalysis, org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex, FrameworkDetectionIndex, IdIndex, fileIncludes, KotlinPackageSourcesMemberNamesIndex, IdeaPluginRegistrationIndex, KotlinBinaryRootToPackageIndex, KotlinTopLevelCallableByPackageShortNameIndex, LombokConfigIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex, KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex, PluginIdModuleIndex, PluginIdDependenciesIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex, devkit.ExtensionPointIndex, org.jetbrains.kotlin.idea.vfilefinder.KlibMetaFileIndex, devkit.ExtensionPointClassIndex, Stubs].
+2025-12-13 18:01:47,617 [   3091]   INFO - #c.i.p.s.StubIndexImpl - Following stub indices will be built:org.jetbrains.kotlin.idea.stubindex.KotlinFilePartClassIndex(v = 2),gr.script.class(v = 5),java.method.parameter.types(v = 3),org.jetbrains.kotlin.idea.stubindex.KotlinAnnotationsIndex(v = 3),org.jetbrains.kotlin.idea.stubindex.KotlinJvmNameAnnotationIndex(v = 2),KotlinProbablyNothingPropertyShortNameIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeFqNameIndex(v = 2),KotlinTopLevelExpectPropertyFqNameIndex(v = 2),properties.index(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinInnerTypeAliasClassIdIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelPropertyFqnNameIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinPropertyShortNameIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinSubclassObjectNameIndex(v = 2),KotlinTypeAliasByExpansionShortNameIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinClassShortNameIndex(v = 2),gr.annot.members(v = 5),gr.script.fqn.s(v = 5),KotlinTopLevelPropertyByPackageIndex(v = 2),java.module.name(v = 4),jvm.static.member.type(v = 2),java.method.name(v = 2),jvm.static.member.name(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeShortNameIndex(v = 2),gr.class.super(v = 5),java.anonymous.baseref(v = 2),java.field.name(v = 2),KotlinTopLevelTypeAliasByPackageIndex(v = 2),KotlinTopLevelExtensionsByReceiverTypeIndex(v = 3),org.jetbrains.kotlin.idea.stubindex.KotlinFunctionShortNameIndex(v = 2),java.class.shortname(v = 4),org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelClassByPackageIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinMultifileClassPartIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelFunctionFqnNameIndex(v = 2),kotlin.primeIndexKey(v = 2),gr.annot.method.name(v = 5),KotlinTopLevelExpectFunctionFqNameIndex(v = 2),KotlinProbablyNothingFunctionShortNameIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinFullClassNameIndex(v = 2),java.class.extlist(v = 3),KotlinProbablyContractedFunctionShortNameIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinExactPackagesIndex(v = 2),dom.elementClass(v = 0),gr.anonymous.class(v = 6),KotlinOverridableInternalMembersShortNameIndex(v = 2),gr.class.fqn.s(v = 5),java.unnamed.class(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelTypeAliasFqNameIndex(v = 2),java.class.fqn(v = 1),KotlinFileFacadeClassByPackageIndex(v = 2),gr.method.name(v = 5),org.jetbrains.kotlin.idea.stubindex.KotlinScriptFqnIndex(v = 2),dom.namespaceKey(v = 1),KotlinTopLevelFunctionByPackageIndex(v = 2),KotlinExtensionsInObjectsByReceiverTypeIndex(v = 2),java.annotations(v = 2),gr.field.name(v = 5),org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasShortNameIndex(v = 2),org.jetbrains.kotlin.idea.stubindex.KotlinSuperClassIndex(v = 2)
+2025-12-13 18:01:47,619 [   3093]   INFO - #c.i.u.i.IndexDataInitializer - Index data initialization done: 517 ms. Initialized stub indexes: {org.jetbrains.kotlin.idea.stubindex.KotlinSuperClassIndex, gr.class.super, jvm.static.member.type, gr.script.class, gr.anonymous.class, KotlinTopLevelExpectPropertyFqNameIndex, KotlinTopLevelFunctionByPackageIndex, KotlinProbablyNothingFunctionShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinPropertyShortNameIndex, dom.elementClass, java.field.name, KotlinTopLevelTypeAliasByPackageIndex, gr.annot.members, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelClassByPackageIndex, properties.index, org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeFqNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFullClassNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinSubclassObjectNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFunctionShortNameIndex, java.method.parameter.types, KotlinTopLevelExtensionsByReceiverTypeIndex, org.jetbrains.kotlin.idea.stubindex.KotlinExactPackagesIndex, KotlinTopLevelPropertyByPackageIndex, java.class.shortname, org.jetbrains.kotlin.idea.stubindex.KotlinAnnotationsIndex, KotlinExtensionsInObjectsByReceiverTypeIndex, gr.method.name, kotlin.primeIndexKey, java.class.extlist, java.module.name, dom.namespaceKey, gr.script.fqn.s, org.jetbrains.kotlin.idea.stubindex.KotlinInnerTypeAliasClassIdIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFilePartClassIndex, org.jetbrains.kotlin.idea.stubindex.KotlinScriptFqnIndex, jvm.static.member.name, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelTypeAliasFqNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinMultifileClassPartIndex, KotlinOverridableInternalMembersShortNameIndex, KotlinProbablyNothingPropertyShortNameIndex, KotlinFileFacadeClassByPackageIndex, KotlinProbablyContractedFunctionShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinJvmNameAnnotationIndex, gr.class.fqn.s, java.unnamed.class, org.jetbrains.kotlin.idea.stubindex.KotlinClassShortNameIndex, java.method.name, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelPropertyFqnNameIndex, gr.annot.method.name, java.annotations, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelFunctionFqnNameIndex, java.anonymous.baseref, java.class.fqn, org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasShortNameIndex, KotlinTopLevelExpectFunctionFqNameIndex, KotlinTypeAliasByExpansionShortNameIndex, gr.field.name}.
+2025-12-13 18:01:49,326 [   4800]   INFO - #c.i.i.s.DeviceIdManager - Generating new Device ID for 'MP'
+2025-12-13 18:01:49,327 [   4801]   INFO - #c.i.i.s.e.EventLogConfiguration - Generating new salt for MP
+2025-12-13 18:01:56,062 [  11536]   INFO - #o.j.q.j.j.QodanaConfigJdkService - Setting up JDK '17' from Qodana config
+2025-12-13 18:01:56,906 [  12380]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Loading global entities com.intellij.platform.workspace.jps.entities.SdkEntity from files
+2025-12-13 18:01:56,924 [  12398]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Loading global entities com.intellij.platform.workspace.jps.entities.LibraryEntity from files
+2025-12-13 18:01:57,386 [  12860]   INFO - #c.i.o.p.i.j.JdkAuto - Looking for a local SDK for JDK with name 17
+2025-12-13 18:01:57,635 [  13109]   INFO - #c.i.o.p.i.j.JdkAuto - The following local JDKs were found: [/opt/idea/jbr, 21.0.6, 21]
+2025-12-13 18:01:57,677 [  13151]   INFO - #c.i.o.p.i.j.JdkAuto - Looking for a possible download for JDK with name 17 ; JdkRequirement:{ JdkRequirement { it >= 17 && same major version }}
+2025-12-13 18:02:56,982 [  72456]   INFO - #c.i.w.i.i.GlobalWorkspaceModel - Global model updated to version 2 in 24 ms: Adding SDK: 17 JavaSDK
+2025-12-13 18:02:56,983 [  72457]   INFO - #o.j.q.j.j.QodanaConfigJdkService - Setting up JDK '17' from Qodana config completed
+2025-12-13 18:02:56,989 [  72463]   INFO - #o.j.q.s.i.r.ConsoleLog - Preparing for the Project opening stage ...
+2025-12-13 18:02:56,990 [  72464]   INFO - STDOUT - Preparing for the Project opening stage ...
+2025-12-13 18:02:57,050 [  72524]   INFO - #c.i.p.p.ProjectEntitiesStorage - Creating entity for project ProjectId(id=1r9dbhv00j0mmc4blvo6)
+2025-12-13 18:02:57,071 [  72545]   INFO - #c.i.p.p.ProjectEntitiesStorage - Entity for project ProjectId(id=1r9dbhv00j0mmc4blvo6) created successfully
+2025-12-13 18:02:57,185 [  72659]   INFO - #c.i.w.i.i.l.m.ModuleBridgeLoaderService - Workspace model loaded without cache. Loading real project state into workspace model. Thread[#39,DefaultDispatcher-worker-11,5,main]
+2025-12-13 18:02:57,255 [  72729]   INFO - #c.i.w.i.i.GlobalWorkspaceModel - Sync global entities with mutable entity storage
+2025-12-13 18:02:57,288 [  72762]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-13 18:02:57,296 [  72770]   INFO - #c.i.w.i.i.j.s.JpsProjectModelSynchronizer - Attempt 1: Apply JPS storage (iml files)
+2025-12-13 18:02:57,308 [  72782]   INFO - #c.i.w.i.i.WorkspaceModelImpl - Project model updated to version 1 in 89 ms: Change entity sources to externally imported
+2025-12-13 18:02:57,323 [  72797]   INFO - #c.i.w.i.i.GlobalWorkspaceModel - Global model updated to version 3 in 4 ms: Sync entities from project project with global storage
+2025-12-13 18:02:57,324 [  72798]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-13 18:02:57,330 [  72804]   INFO - #c.i.w.i.i.j.s.JpsProjectModelSynchronizer - Attempt 1: Changes were successfully applied
+2025-12-13 18:02:57,365 [  72839]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.project.MavenProjectsManagerEx, plugin=org.jetbrains.idea.maven)
+2025-12-13 18:02:57,367 [  72841]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.navigator.MavenProjectsNavigator, plugin=org.jetbrains.idea.maven)
+2025-12-13 18:02:57,368 [  72842]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=org.jetbrains.idea.maven.tasks.MavenShortcutsManager, plugin=org.jetbrains.idea.maven)
+2025-12-13 18:02:57,440 [  72914]   INFO - #c.i.p.c.ProjectCodeStyleSettingsManager - Initialized from default code style settings.
+2025-12-13 18:02:57,597 [  73071]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-13 18:02:57,601 [  73075]   INFO - #c.i.w.i.i.WorkspaceModelImpl - Project model updated to version 3 in 68 ms: Module model commit
+2025-12-13 18:02:57,658 [  73132]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-13 18:02:57,661 [  73135]   INFO - #c.i.o.a.i.NonBlockingReadActionImpl - OTel monitoring for NonBlockingReadAction is enabled
+2025-12-13 18:02:57,669 [  73143]   INFO - #c.i.w.i.i.WorkspaceModelImpl - Project model updated to version 4 in 24 ms: Root model commit
+2025-12-13 18:02:57,708 [  73182]   INFO - #c.i.u.s.JBUIScale - Computed user scale factor: 1.0 (IDE-managed HiDPI)
+2025-12-13 18:02:57,722 [  73196]   INFO - STDOUT - Opening project…Waiting for startup activities
+2025-12-13 18:02:57,739 [  73213]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) com.intellij.openapi.project.InitialDumbTaskRequiredForSmartMode@2edd66a1
+2025-12-13 18:02:57,744 [  73218]   INFO - #c.i.o.p.DumbServiceMergingTaskQueue - Initializing DumbServiceMergingTaskQueue...
+2025-12-13 18:02:57,753 [  73227]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.util.indexing.ProjectFileBasedIndexStartupActivity@6013a10d
+2025-12-13 18:02:57,764 [  73238]   INFO - #c.i.u.i.p.IncrementalProjectIndexableFilesFilterHolder - PersistentProjectIndexableFilesFilterFactory is chosen as indexable files filter factory for project: project
+2025-12-13 18:02:57,824 [  73298]   INFO - #o.j.k.i.PluginStartupActivity - Kotlin plugin mode: K1
+2025-12-13 18:02:57,831 [  73305]   INFO - #c.i.o.e.s.p.m.ExternalProjectsDataStorage - Load external projects data in 15 millis (read time: 8)
+2025-12-13 18:02:57,832 [  73306]   INFO - #o.j.p.g.j.IdeVersionedDataUpdater - Updating version compatibility for org.jetbrains.plugins.gradle.jvmcompat.GradleCompatibilitySupportUpdater. Last update was: 0. Update interval: 1d Url to update https://download.jetbrains.com/resources/intellij/plugins/gradle/v1/compatibility.json
+2025-12-13 18:02:57,840 [  73314]   INFO - #c.i.d.PerformanceWatcherImpl - Post-startup activities under progress took 124ms; general responsiveness: ok; EDT responsiveness: ok
+2025-12-13 18:02:57,841 [  73315]   INFO - #c.i.o.v.i.p.NewMappings - VCS Root: [Git] - [<Project>]
+2025-12-13 18:02:57,851 [  73325]   INFO - #o.j.q.s.i.r.ConsoleLog - Setting project JDK 17
+2025-12-13 18:02:57,852 [  73326]   INFO - STDOUT - Setting project JDK 17
+2025-12-13 18:02:57,871 [  73345]   INFO - #c.i.u.i.d.AppIndexingDependenciesService - Invalidating all indexing flags. Reason: App fingerprint changed: FingerprintImpl(fingerprint=0) to FingerprintImpl(fingerprint=5102961617961809797)
+2025-12-13 18:02:57,896 [  73370]   INFO - #c.i.i.s.IdeStartupScripts - 0 startup script(s) found
+2025-12-13 18:02:57,914 [  73388]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-13 18:02:57,916 [  73390]   INFO - #c.i.w.i.i.WorkspaceModelImpl - Project model updated to version 5 in 97 ms: ConstantEntitiesCheckActivity
+2025-12-13 18:02:57,950 [  73424]   INFO - #c.i.u.i.UnindexedFilesScanner - Full scanning on startup will NOT be skipped for project project because of following unsatisfied conditions:
+FILTER_IS_NOT_UP_TO_DATE: Persistent indexable files filter is NOT up-to-date because of following unsatisfied conditions: [IS_FILTER_LOADED_FROM_DISK, FILTER_IS_NOT_INVALIDATED, INDEXING_REQUEST_ID_DID_NOT_CHANGE_AFTER_LAST_SCANNING]
+2025-12-13 18:02:57,978 [  73452]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.util.indexing.ProjectFileBasedIndexStartupActivity@6013a10d
+2025-12-13 18:02:57,986 [  73460]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.util.indexing.FileBasedIndexInfrastructureExtensionStartup@4d8460a6
+2025-12-13 18:02:57,988 [  73462]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.util.indexing.FileBasedIndexInfrastructureExtensionStartup@4d8460a6
+2025-12-13 18:02:57,990 [  73464]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.util.indexing.DumbModeWhileScanningSubscriber@4aa01134
+2025-12-13 18:02:57,995 [  73469]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.util.indexing.DumbModeWhileScanningSubscriber@4aa01134
+2025-12-13 18:02:57,997 [  73471]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Running task required for smart mode: com.intellij.ide.projectWizard.generators.SdkPreIndexingRequiredForSmartModeActivity@62fe5d91
+2025-12-13 18:02:57,998 [  73472]   INFO - #c.i.o.v.i.p.NewMappings - Mapped Roots: 1
+2025-12-13 18:02:58,000 [  73474]   INFO - #c.i.o.v.i.p.NewMappings - Detected mapped Root: [Git] - [/data/project]
+2025-12-13 18:02:58,000 [  73474]   INFO - #c.i.o.p.InitialDumbTaskRequiredForSmartMode - Finished task required for smart mode: com.intellij.ide.projectWizard.generators.SdkPreIndexingRequiredForSmartModeActivity@62fe5d91
+2025-12-13 18:02:58,002 [  73476]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) com.intellij.openapi.project.InitialDumbTaskRequiredForSmartMode@2edd66a1
+2025-12-13 18:02:58,029 [  73503]   INFO - #git4idea.commands.GitHandler - [.] git version
+2025-12-13 18:02:58,038 [  73512]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [project]
+2025-12-13 18:02:58,042 [  73516]   INFO - #c.i.o.p.UnindexedFilesScannerExecutor - [15375f63] Running task: com.intellij.util.indexing.UnindexedFilesScannerExecutorImpl$ScheduledScanningTask@788f3441
+2025-12-13 18:02:58,049 [  73523]   INFO - #git4idea.commands.GitHandler - git version 2.30.2
+2025-12-13 18:02:58,050 [  73524]   INFO - STDOUT - Startup activities finished
+2025-12-13 18:02:58,064 [  73538]   INFO - #git4idea.config.GitExecutableFileTester - Git version for /usr/bin/git: 2.30.2.0 (UNIX)
+2025-12-13 18:02:58,067 [  73541]   INFO - #c.i.u.i.UnindexedFilesScanner - [15375f63], scanning stage: DelayedPushProperties
+2025-12-13 18:02:58,089 [  73563]   INFO - STDOUT - done.
+2025-12-13 18:02:58,092 [  73566]   INFO - #o.j.q.s.i.r.ConsoleLog - The Project opening stage completed in 1s
+2025-12-13 18:02:58,093 [  73567]   INFO - STDOUT - The Project opening stage completed in 1s
+2025-12-13 18:02:58,093 [  73567]   INFO - #c.i.u.i.UnindexedFilesScanner - Started scanning for indexing of project. Reason: On project open
+2025-12-13 18:02:58,095 [  73569]   INFO - #o.j.q.s.i.r.ConsoleLog - Preparing for the Project configuration stage ...
+2025-12-13 18:02:58,095 [  73569]   INFO - STDOUT - Preparing for the Project configuration stage ...
+2025-12-13 18:02:58,098 [  73572]   INFO - #c.i.u.i.UnindexedFilesScanner - [15375f63], scanning stage: CreatingIterators
+2025-12-13 18:02:58,110 [  73584]   INFO - STDOUT - 'background activities start' is in progress...
+2025-12-13 18:02:58,252 [  73726]   INFO - #c.i.c.CompilerWorkspaceConfiguration - Available processors: 16
+2025-12-13 18:02:58,405 [  73879]   INFO - #c.i.u.i.UnindexedFilesScanner - [15375f63], scanning stage: CollectingIndexableFiles
+2025-12-13 18:02:58,413 [  73887]   INFO - #c.i.u.i.UnindexedFilesScanner - Scanning of project uses 16 scanning threads
+2025-12-13 18:02:58,645 [  74119]   INFO - STDOUT - [IDE]: Task 'Resolving SDKs' started
+2025-12-13 18:02:58,646 [  74120]   INFO - STDOUT - [IDE]: Validating existing SDKs
+2025-12-13 18:02:58,657 [  74131]   INFO - STDOUT - [IDE]: Task 'Resolving SDKs' ended in 12 ms
+2025-12-13 18:02:58,679 [  74153]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of reflect.kotlin_builtins by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file reflect.kotlin_builtins with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=962, fileInfo='reflect.kotlin_builtins(id=962)'}] and removers: []; 
+2025-12-13 18:02:58,683 [  74157]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of kotlin.kotlin_builtins by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file kotlin.kotlin_builtins with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=949, fileInfo='kotlin.kotlin_builtins(id=949)'}] and removers: []; 
+2025-12-13 18:02:58,685 [  74159]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of collections.kotlin_builtins by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file collections.kotlin_builtins with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=951, fileInfo='collections.kotlin_builtins(id=951)'}] and removers: []; 
+2025-12-13 18:02:58,687 [  74161]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of internal.kotlin_builtins by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file internal.kotlin_builtins with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=966, fileInfo='internal.kotlin_builtins(id=966)'}] and removers: []; 
+2025-12-13 18:02:58,692 [  74166]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of ranges.kotlin_builtins by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file ranges.kotlin_builtins with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=956, fileInfo='ranges.kotlin_builtins(id=956)'}] and removers: []; 
+2025-12-13 18:02:58,694 [  74168]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of coroutines.kotlin_builtins by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file coroutines.kotlin_builtins with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=972, fileInfo='coroutines.kotlin_builtins(id=972)'}] and removers: []; 
+2025-12-13 18:02:58,696 [  74170]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of annotation.kotlin_builtins by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file annotation.kotlin_builtins with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=959, fileInfo='annotation.kotlin_builtins(id=959)'}] and removers: []; 
+2025-12-13 18:02:58,726 [  74200]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of maven-4.0.0.xsd by request of indexes: [DomFileIndex->NOT_INDEXED,IdeaPluginRegistrationIndex->NOT_INDEXED,PluginIdModuleIndex->NOT_INDEXED,PluginIdDependenciesIndex->NOT_INDEXED,devkit.ExtensionPointIndex->NOT_INDEXED,devkit.ExtensionPointClassIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Trigram.Index->NOT_INDEXED,IdIndex->NOT_INDEXED,XmlNamespaces->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file maven-4.0.0.xsd with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=1101, fileInfo='maven-4.0.0.xsd(id=1101)'}] and removers: []; 
+2025-12-13 18:02:58,728 [  74202]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of profiles-1.0.0.xsd by request of indexes: [DomFileIndex->NOT_INDEXED,IdeaPluginRegistrationIndex->NOT_INDEXED,PluginIdModuleIndex->NOT_INDEXED,PluginIdDependenciesIndex->NOT_INDEXED,devkit.ExtensionPointIndex->NOT_INDEXED,devkit.ExtensionPointClassIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Trigram.Index->NOT_INDEXED,IdIndex->NOT_INDEXED,XmlNamespaces->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file profiles-1.0.0.xsd with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=1107, fileInfo='profiles-1.0.0.xsd(id=1107)'}] and removers: []; 
+2025-12-13 18:02:58,731 [  74205]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of settings-1.0.0.xsd by request of indexes: [DomFileIndex->NOT_INDEXED,IdeaPluginRegistrationIndex->NOT_INDEXED,PluginIdModuleIndex->NOT_INDEXED,PluginIdDependenciesIndex->NOT_INDEXED,devkit.ExtensionPointIndex->NOT_INDEXED,devkit.ExtensionPointClassIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Trigram.Index->NOT_INDEXED,IdIndex->NOT_INDEXED,XmlNamespaces->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file settings-1.0.0.xsd with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=1111, fileInfo='settings-1.0.0.xsd(id=1111)'}] and removers: []; 
+2025-12-13 18:02:58,752 [  74226]   INFO - #o.j.p.g.j.IdeVersionedDataUpdater - IDE versioned data for org.jetbrains.plugins.gradle.jvmcompat.GradleCompatibilitySupportUpdater was updated
+2025-12-13 18:02:59,495 [  74969]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file aws.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=3235, fileInfo='aws.xml(id=3235)'}] and removers: []; 
+2025-12-13 18:02:59,496 [  74970]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file vcs.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=3229, fileInfo='vcs.xml(id=3229)'}] and removers: []; 
+2025-12-13 18:02:59,497 [  74971]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file misc.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=172, fileInfo='misc.xml(id=172)'}] and removers: []; 
+2025-12-13 18:02:59,499 [  74973]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file compiler.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=3233, fileInfo='compiler.xml(id=3233)'}] and removers: []; 
+2025-12-13 18:02:59,500 [  74974]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file encodings.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=3232, fileInfo='encodings.xml(id=3232)'}] and removers: []; 
+2025-12-13 18:02:59,501 [  74975]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file workspace.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=3227, fileInfo='workspace.xml(id=3227)'}] and removers: []; 
+2025-12-13 18:02:59,502 [  74976]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file jarRepositories.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=3234, fileInfo='jarRepositories.xml(id=3234)'}] and removers: []; 
+2025-12-13 18:02:59,503 [  74977]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file copilot.data.migration.ask.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=3230, fileInfo='copilot.data.migration.ask.xml(id=3230)'}] and removers: []; 
+2025-12-13 18:02:59,503 [  74977]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file copilot.data.migration.edit.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=3236, fileInfo='copilot.data.migration.edit.xml(id=3236)'}] and removers: []; 
+2025-12-13 18:02:59,505 [  74979]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file copilot.data.migration.agent.xml with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=3231, fileInfo='copilot.data.migration.agent.xml(id=3231)'}] and removers: []; 
+2025-12-13 18:03:02,896 [  78370]   INFO - #c.i.o.e.i.AbstractOpenProjectProvider - Linking MAVEN project /data/project
+2025-12-13 18:03:02,919 [  78393]   INFO - #o.j.q.s.QodanaLinterBackgroundStartupActivity - Executed Qodana backgroundPostStartupActivity
+2025-12-13 18:03:02,925 [  78399]   INFO - STDOUT - 'background activities start' is completed.
+2025-12-13 18:03:02,927 [  78401]   INFO - STDOUT - 'external-system' is in progress...
+2025-12-13 18:03:02,999 [  78473]   INFO - #o.j.j.b.i.CompilerReferenceIndex - backward reference index version doesn't exist
+2025-12-13 18:03:03,042 [  78516]   INFO - #c.i.c.b.IsUpToDateCheckStartupActivity - suitable consumer is not found
+2025-12-13 18:03:03,514 [  78988]   INFO - #c.i.e.r.RemoteProcessSupport - Starring remote process. Existing info not found, creating PendingInfo:<DeferredCoroutine{Active}@43d62f6,>
+2025-12-13 18:03:03,539 [  79013]   INFO - #o.j.i.maven - Using extension org.jetbrains.idea.maven.maven3.Maven3Support@725e63c8 to start MavenServer
+2025-12-13 18:03:03,644 [  79118]   INFO - #c.i.e.r.RemoteProcessSupport - Staring remote process, startNotified received, creating PendingInfo: <DeferredCoroutine{Active}@43d62f6,>
+2025-12-13 18:03:03,648 [  79122]   INFO - #o.j.i.maven - Sent token to maven server
+2025-12-13 18:03:04,423 [  79897]   INFO - #c.i.e.r.RemoteProcessSupport - Started remote process on: 127.0.0.1:62594with service port 35853 and id = Maven36ServerImpl55da1cc9
+2025-12-13 18:03:05,053 [  80527]   WARN - #o.j.i.maven - updateAllMavenProjects started: incremental=true, MavenProjectAware.reloadProject, undefined modifications project
+2025-12-13 18:03:05,061 [  80535]   INFO - #o.j.i.maven - Updating index list for project Project(name=project, containerState=COMPONENT_CREATED, componentStore=/data/project)
+2025-12-13 18:03:05,064 [  80538]   INFO - #o.j.i.maven - updating index list for Project(name=project, containerState=COMPONENT_CREATED, componentStore=/data/project) - will add repository local:local:/data/cache/.m2, before was null
+2025-12-13 18:03:05,077 [  80551]   INFO - #o.j.i.maven - Starting update maven index for local:local:/data/cache/.m2
+2025-12-13 18:03:05,090 [  80564]   INFO - #o.j.i.maven - GAV index updated for repo /data/cache/.m2, 0 files processed in 0 groups in 6 millis
+2025-12-13 18:03:12,063 [  87537]   INFO - #c.i.u.i.UnindexedFilesScanner - Scanning completed for project. Number of scanned files: 42637; number of files for indexing: 42286
+2025-12-13 18:03:12,065 [  87539]   INFO - #c.i.o.p.InitialVfsRefreshService - 15375f63: marking roots for initial VFS refresh
+2025-12-13 18:03:12,067 [  87541]   INFO - #c.i.o.p.InitialVfsRefreshService - 15375f63: starting initial VFS refresh of 4 roots
+2025-12-13 18:03:12,319 [  87793]   INFO - #c.i.o.p.InitialVfsRefreshService - 15375f63: initial VFS refresh finished in 250 ms
+2025-12-13 18:03:12,333 [  87807]   INFO - #c.i.o.p.UnindexedFilesScannerExecutor - [15375f63] Task finished: com.intellij.util.indexing.UnindexedFilesScannerExecutorImpl$ScheduledScanningTask@788f3441
+2025-12-13 18:03:12,333 [  87807]   INFO - #c.i.o.p.DumbServiceImpl - enter dumb mode [project]
+2025-12-13 18:03:12,339 [  87813]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) UnindexedFilesIndexer[project, 42286 files, reason: On project open]
+2025-12-13 18:03:12,358 [  87832]   INFO - #c.i.u.i.c.IndexUpdateRunner - Using 16 workers for indexing and 4 for writing indexes
+2025-12-13 18:03:28,070 [ 103544]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 29s
+2025-12-13 18:03:28,080 [ 103554]   INFO - STDOUT - Keep running Project configuration ... so far 29s
+2025-12-13 18:03:30,330 [ 105804]   INFO - #git4idea.commands.GitHandler - git status took 17684 ms. Command parameters: 
+setsid /usr/bin/git -c credential.helper= -c core.quotepath=false -c log.showSignature=false status --porcelain -z --untracked-files=no --ignored=no -- .
+2025-12-13 18:03:51,194 [ 126668]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 7 finished gracefully
+2025-12-13 18:03:51,194 [ 126668]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 5 finished gracefully
+2025-12-13 18:03:51,194 [ 126668]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 1 finished gracefully
+2025-12-13 18:03:51,194 [ 126668]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 3 finished gracefully
+2025-12-13 18:03:51,196 [ 126670]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 9 finished gracefully
+2025-12-13 18:03:51,195 [ 126669]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 6 finished gracefully
+2025-12-13 18:03:51,195 [ 126669]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 12 finished gracefully
+2025-12-13 18:03:51,195 [ 126669]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 2 finished gracefully
+2025-12-13 18:03:51,197 [ 126671]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 4 finished gracefully
+2025-12-13 18:03:51,197 [ 126671]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 15 finished gracefully
+2025-12-13 18:03:51,197 [ 126671]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 11 finished gracefully
+2025-12-13 18:03:51,196 [ 126670]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 8 finished gracefully
+2025-12-13 18:03:51,196 [ 126670]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 0 finished gracefully
+2025-12-13 18:03:51,195 [ 126669]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 10 finished gracefully
+2025-12-13 18:03:51,195 [ 126669]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 14 finished gracefully
+2025-12-13 18:03:51,206 [ 126680]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 13 finished gracefully
+2025-12-13 18:03:51,716 [ 127190]   INFO - #c.i.u.i.ProjectChangedFilesScanner - Retrieving changed during indexing files of project : 2 to update, calculated in 378ms
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 2 finished gracefully
+2025-12-13 18:03:51,719 [ 127193]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 13 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 12 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 11 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 10 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 9 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 8 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 7 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 6 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 5 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 4 finished gracefully
+2025-12-13 18:03:51,718 [ 127192]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 3 finished gracefully
+2025-12-13 18:03:51,719 [ 127193]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 14 finished gracefully
+2025-12-13 18:03:51,719 [ 127193]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 15 finished gracefully
+2025-12-13 18:03:51,726 [ 127200]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 0 finished gracefully
+2025-12-13 18:03:51,731 [ 127205]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 1 finished gracefully
+2025-12-13 18:03:51,753 [ 127227]   INFO - #c.i.u.i.UnindexedFilesIndexer - Finished for project. Unindexed files update took 39405ms; general responsiveness: ok; EDT responsiveness: ok
+2025-12-13 18:03:51,762 [ 127236]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) UnindexedFilesIndexer[project, 42286 files, reason: On project open]
+2025-12-13 18:03:51,764 [ 127238]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [project]
+2025-12-13 18:03:51,766 [ 127240]   INFO - STDOUT - [IDE]: Task 'Updating indexes' ended
+2025-12-13 18:03:51,888 [ 127362]   INFO - #c.i.i.b.BookmarksManager - no state loaded for new bookmarks
+2025-12-13 18:03:51,897 [ 127371]   INFO - #c.i.i.b.BookmarkManager - no state loaded for old bookmarks
+2025-12-13 18:03:51,924 [ 127398]   INFO - #c.i.i.f.FavoritesManager - no state loaded for old favorites
+2025-12-13 18:03:58,031 [ 133505]   INFO - #c.i.u.g.s.GistStorageImpl - Cleaning old huge-gists dirs from [/data/cache/idea/243/caches/huge-gists] ...
+2025-12-13 18:03:58,032 [ 133506]   INFO - #c.i.u.g.s.GistStorageImpl - Cleaning old huge-gists dirs finished
+2025-12-13 18:03:58,074 [ 133548]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 59s
+2025-12-13 18:03:58,075 [ 133549]   INFO - STDOUT - Keep running Project configuration ... so far 59s
+2025-12-13 18:04:28,074 [ 163548]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 1m 29s
+2025-12-13 18:04:28,075 [ 163549]   INFO - STDOUT - Keep running Project configuration ... so far 1m 29s
+2025-12-13 18:04:51,786 [ 187260]   INFO - #c.i.o.w.i.X11UiUtil - Cannot get icon theme
+java.io.IOException: Cannot run program "gsettings": error=2, No such file or directory
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at com.intellij.openapi.wm.impl.X11UiUtil.exec(X11UiUtil.java:605)
+	at com.intellij.openapi.wm.impl.X11UiUtil.getIconTheme(X11UiUtil.java:448)
+	at com.intellij.internal.statistic.collectors.fus.os.LinuxWindowManagerUsageCollector.getMetrics(LinuxWindowManagerUsageCollector.java:137)
+	at com.intellij.internal.statistic.service.fus.collectors.ApplicationUsagesCollector.getMetricsAsync$lambda$0(ApplicationUsagesCollector.kt:49)
+	at com.intellij.openapi.progress.CoroutinesKt.blockingContextInner(coroutines.kt:341)
+	at com.intellij.openapi.progress.CoroutinesKt$blockingContext$2.invokeSuspend(coroutines.kt:233)
+	at com.intellij.openapi.progress.CoroutinesKt$blockingContext$2.invoke(coroutines.kt)
+	at com.intellij.openapi.progress.CoroutinesKt$blockingContext$2.invoke(coroutines.kt)
+	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:62)
+	at kotlinx.coroutines.CoroutineScopeKt.coroutineScope(CoroutineScope.kt:261)
+	at com.intellij.openapi.progress.CoroutinesKt.blockingContext(coroutines.kt:232)
+	at com.intellij.internal.statistic.service.fus.collectors.ApplicationUsagesCollector.getMetricsAsync$suspendImpl(ApplicationUsagesCollector.kt:48)
+	at com.intellij.internal.statistic.service.fus.collectors.ApplicationUsagesCollector.getMetricsAsync(ApplicationUsagesCollector.kt)
+	at com.intellij.internal.statistic.service.fus.collectors.FUStateUsagesLogger$logApplicationStates$2$1.invokeSuspend(FUStateUsagesLogger.kt:185)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:608)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:873)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:763)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:750)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.base/java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:295)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:225)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 21 more
+2025-12-13 18:04:58,075 [ 193549]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 1m 59s
+2025-12-13 18:04:58,081 [ 193555]   INFO - STDOUT - Keep running Project configuration ... so far 1m 59s
+2025-12-13 18:05:28,083 [ 223557]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 2m 29s
+2025-12-13 18:05:28,083 [ 223557]   INFO - STDOUT - Keep running Project configuration ... so far 2m 29s
+2025-12-13 18:05:58,083 [ 253557]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 2m 59s
+2025-12-13 18:05:58,088 [ 253562]   INFO - STDOUT - Keep running Project configuration ... so far 2m 59s
+2025-12-13 18:06:28,091 [ 283565]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 3m 29s
+2025-12-13 18:06:28,091 [ 283565]   INFO - STDOUT - Keep running Project configuration ... so far 3m 29s
+2025-12-13 18:06:58,087 [ 313561]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 3m 59s
+2025-12-13 18:06:58,088 [ 313562]   INFO - STDOUT - Keep running Project configuration ... so far 3m 59s
+2025-12-13 18:07:28,087 [ 343561]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 4m 29s
+2025-12-13 18:07:28,091 [ 343565]   INFO - STDOUT - Keep running Project configuration ... so far 4m 29s
+2025-12-13 18:07:33,500 [ 348974]   INFO - #o.j.i.maven - maven plugin resolution started: [org.apache.maven.plugins:maven-jar-plugin:3.4.2, org.apache.maven.plugins:maven-surefire-plugin:3.2.5, org.apache.maven.plugins:maven-compiler-plugin:3.11.0, org.apache.maven.plugins:maven-site-plugin:3.12.1, org.springframework.boot:spring-boot-maven-plugin:3.3.5, org.apache.maven.plugins:maven-resources-plugin:3.3.1, org.apache.maven.plugins:maven-clean-plugin:3.3.2, org.apache.maven.plugins:maven-deploy-plugin:3.1.3, org.jacoco:jacoco-maven-plugin:0.8.11, org.apache.maven.plugins:maven-install-plugin:3.1.3]
+2025-12-13 18:07:33,713 [ 349187]   INFO - #o.j.i.maven - Importing Maven project using Workspace API
+2025-12-13 18:07:36,322 [ 351796]   INFO - #c.i.w.i.i.EntitiesOrphanageImpl - Update orphanage. 0 modules added
+2025-12-13 18:07:36,322 [ 351796]   INFO - #c.i.o.p.UnindexedFilesScannerExecutor - [15375f63] Running task: com.intellij.util.indexing.UnindexedFilesScannerExecutorImpl$ScheduledScanningTask@7f8efbfe
+2025-12-13 18:07:36,323 [ 351797]   INFO - #c.i.u.i.UnindexedFilesScanner - [15375f63], scanning stage: DelayedPushProperties
+2025-12-13 18:07:36,368 [ 351842]   INFO - #c.i.u.i.UnindexedFilesScanner - Started scanning for indexing of project. Reason: changes in: "Module 'url-shortener' (all roots)", "JDK 17 /root/.jdks/ms-17.0.17", "Library Maven: ch.qos.logback:logback-classic:1.5.11 (#1 class roots, #0 source roots)", "Library Maven: ch.qos.logback:logback-core:1.5.11 (#1 class roots, #0 source roots)", "Library Maven: com.beust:jcommander:1.82 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.core:jackson-annotations:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.core:jackson-core:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.core:jackson-databind:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.17.2 (#1 class roots, #0 source roots)" and 33 iterators more
+2025-12-13 18:07:36,369 [ 351843]   INFO - #c.i.u.i.UnindexedFilesScanner - [15375f63], scanning stage: CreatingIterators
+2025-12-13 18:07:36,369 [ 351843]   INFO - #c.i.u.i.UnindexedFilesScanner - [15375f63], scanning stage: CollectingIndexableFiles
+2025-12-13 18:07:36,370 [ 351844]   INFO - #c.i.u.i.UnindexedFilesScanner - Scanning of project uses 16 scanning threads
+2025-12-13 18:07:36,372 [ 351846]   INFO - #o.j.i.m.i.w.WorkspaceProjectImporter - Project model updated to version 6 (attempts: 1, previous version: 5)
+2025-12-13 18:07:36,417 [ 351891]   INFO - #o.j.i.maven - [maven import] applying models to workspace model took 2703ms
+2025-12-13 18:07:36,422 [ 351896]   INFO - #o.j.i.maven - Updating index list for project Project(name=project, containerState=COMPONENT_CREATED, componentStore=/data/project)
+2025-12-13 18:07:36,424 [ 351898]   INFO - #o.j.i.maven - updating index list for Project(name=project, containerState=COMPONENT_CREATED, componentStore=/data/project) - local:local:/data/cache/.m2 remains the same, nothing to update
+2025-12-13 18:07:36,468 [ 351942]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of AnalyticsEvent.java by request of indexes: [java.fun.expression->NOT_INDEXED,java.null.method.argument->NOT_INDEXED,java.binary.plus.expression->NOT_INDEXED,Stubs->NOT_INDEXED,]. 
+2025-12-13 18:07:36,477 [ 351951]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file jackson-datatype-jdk8-2.17.2.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=92528, fileInfo='jackson-datatype-jdk8-2.17.2.jar(id=92528)'}] and removers: []; 
+2025-12-13 18:07:36,477 [ 351951]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of ShortenRequest.java by request of indexes: [java.fun.expression->NOT_INDEXED,java.null.method.argument->NOT_INDEXED,java.binary.plus.expression->NOT_INDEXED,Stubs->NOT_INDEXED,]. 
+2025-12-13 18:07:36,478 [ 351952]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file jackson-datatype-jsr310-2.17.2.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=92487, fileInfo='jackson-datatype-jsr310-2.17.2.jar(id=92487)'}] and removers: []; 
+2025-12-13 18:07:36,478 [ 351952]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file docker-java-transport-3.3.6.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=92342, fileInfo='docker-java-transport-3.3.6.jar(id=92342)'}] and removers: []; 
+2025-12-13 18:07:36,478 [ 351952]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of ShortenResponse.java by request of indexes: [java.fun.expression->NOT_INDEXED,java.null.method.argument->NOT_INDEXED,java.binary.plus.expression->NOT_INDEXED,Stubs->NOT_INDEXED,]. 
+2025-12-13 18:07:36,478 [ 351952]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file jackson-module-parameter-names-2.17.2.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=92418, fileInfo='jackson-module-parameter-names-2.17.2.jar(id=92418)'}] and removers: []; 
+2025-12-13 18:07:36,479 [ 351953]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of Jsr310NullKeySerializer.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file Jsr310NullKeySerializer.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=93026, fileInfo='Jsr310NullKeySerializer.class(id=93026)'}] and removers: []; 
+2025-12-13 18:07:36,479 [ 351953]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of Jdk8Module.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file Jdk8Module.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=92903, fileInfo='Jdk8Module.class(id=92903)'}] and removers: []; 
+2025-12-13 18:07:36,494 [ 351968]   INFO - #c.i.o.p.DumbServiceImpl - enter dumb mode [project]
+2025-12-13 18:07:36,623 [ 352097]   INFO - #c.i.o.a.i.ApplicationImpl - LONG VFS PROCESSING. Topic=BulkFileListener, offender=class com.intellij.psi.impl.file.impl.PsiVFSListenerKt$installGlobalListener$1, message=after, time=130ms
+2025-12-13 18:07:36,670 [ 352144]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of PackageVersion.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file PackageVersion.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=92894, fileInfo='PackageVersion.class(id=92894)'}] and removers: []; 
+2025-12-13 18:07:36,671 [ 352145]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of PackageVersion.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file PackageVersion.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=92658, fileInfo='PackageVersion.class(id=92658)'}] and removers: []; 
+2025-12-13 18:07:36,671 [ 352145]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of ZonedDateTimeKeySerializer.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file ZonedDateTimeKeySerializer.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=93028, fileInfo='ZonedDateTimeKeySerializer.class(id=93028)'}] and removers: []; 
+2025-12-13 18:07:36,676 [ 352150]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file jcommander-1.82.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=92386, fileInfo='jcommander-1.82.jar(id=92386)'}] and removers: []; 
+2025-12-13 18:07:36,671 [ 352145]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file jackson-annotations-2.17.2.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=92405, fileInfo='jackson-annotations-2.17.2.jar(id=92405)'}] and removers: []; 
+2025-12-13 18:07:36,674 [ 352148]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of SSLConfig.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file SSLConfig.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=92825, fileInfo='SSLConfig.class(id=92825)'}] and removers: []; 
+2025-12-13 18:07:36,672 [ 352146]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@61d84e24 (reason: Push on VFS changes)
+2025-12-13 18:07:36,671 [ 352145]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of Jdk8Serializers.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file Jdk8Serializers.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=92868, fileInfo='Jdk8Serializers.class(id=92868)'}] and removers: []; 
+2025-12-13 18:07:36,681 [ 352155]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file zstd-jni-1.5.6-3.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=92512, fileInfo='zstd-jni-1.5.6-3.jar(id=92512)'}] and removers: []; 
+2025-12-13 18:07:36,726 [ 352200]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file android-json-0.0.20131108.vaadin1.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=92393, fileInfo='android-json-0.0.20131108.vaadin1.jar(id=92393)'}] and removers: []; 
+2025-12-13 18:07:36,729 [ 352203]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file javase-3.5.1.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=92445, fileInfo='javase-3.5.1.jar(id=92445)'}] and removers: []; 
+2025-12-13 18:07:36,742 [ 352216]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file libzstd-jni-1.5.6-3.dll with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=93394, fileInfo='libzstd-jni-1.5.6-3.dll(id=93394)'}] and removers: []; 
+2025-12-13 18:07:36,758 [ 352232]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@61d84e24 (reason: Push on VFS changes)
+2025-12-13 18:07:36,777 [ 352251]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [project]
+2025-12-13 18:07:36,782 [ 352256]   INFO - STDOUT - [IDE]: Task 'Updating indexes' ended
+2025-12-13 18:07:37,258 [ 352732]   INFO - #c.i.o.p.DumbServiceImpl - enter dumb mode [project]
+2025-12-13 18:07:37,270 [ 352744]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@3a00639f (reason: Push on VFS changes)
+2025-12-13 18:07:37,291 [ 352765]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@3a00639f (reason: Push on VFS changes)
+2025-12-13 18:07:37,292 [ 352766]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) UnindexedFilesIndexer[project, 0 files, reason: On refresh of files in project]
+2025-12-13 18:07:37,293 [ 352767]   INFO - #c.i.u.i.c.IndexUpdateRunner - Using 16 workers for indexing and 4 for writing indexes
+2025-12-13 18:07:37,301 [ 352775]   INFO - #c.i.u.i.ProjectChangedFilesScanner - Retrieving changed during indexing files of project : 34 to update, calculated in 6ms
+2025-12-13 18:07:37,466 [ 352940]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 6 finished gracefully
+2025-12-13 18:07:37,471 [ 352945]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 8 finished gracefully
+2025-12-13 18:07:37,471 [ 352945]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 7 finished gracefully
+2025-12-13 18:07:37,476 [ 352950]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 14 finished gracefully
+2025-12-13 18:07:37,474 [ 352948]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 10 finished gracefully
+2025-12-13 18:07:37,472 [ 352946]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 12 finished gracefully
+2025-12-13 18:07:37,478 [ 352952]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 5 finished gracefully
+2025-12-13 18:07:37,492 [ 352966]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 0 finished gracefully
+2025-12-13 18:07:37,502 [ 352976]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 1 finished gracefully
+2025-12-13 18:07:37,505 [ 352979]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 9 finished gracefully
+2025-12-13 18:07:37,502 [ 352976]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 11 finished gracefully
+2025-12-13 18:07:37,517 [ 352991]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 2 finished gracefully
+2025-12-13 18:07:37,518 [ 352992]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 13 finished gracefully
+2025-12-13 18:07:37,517 [ 352991]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 4 finished gracefully
+2025-12-13 18:07:37,523 [ 352997]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 15 finished gracefully
+2025-12-13 18:07:37,537 [ 353011]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 3 finished gracefully
+2025-12-13 18:07:37,559 [ 353033]   INFO - #c.i.u.i.UnindexedFilesIndexer - Finished for project. Unindexed files update took 266ms; general responsiveness: ok; EDT responsiveness: ok
+2025-12-13 18:07:37,565 [ 353039]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) UnindexedFilesIndexer[project, 0 files, reason: On refresh of files in project]
+2025-12-13 18:07:37,568 [ 353042]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [project]
+2025-12-13 18:07:37,570 [ 353044]   INFO - STDOUT - [IDE]: Task 'Updating indexes' ended
+2025-12-13 18:07:39,491 [ 354965]   INFO - #c.i.u.i.UnindexedFilesScanner - Scanning completed for project. Number of scanned files: 55709; number of files for indexing: 13296
+2025-12-13 18:07:39,495 [ 354969]   INFO - #c.i.o.p.UnindexedFilesScannerExecutor - [15375f63] Task finished: com.intellij.util.indexing.UnindexedFilesScannerExecutorImpl$ScheduledScanningTask@7f8efbfe
+2025-12-13 18:07:39,496 [ 354970]   INFO - #c.i.o.p.DumbServiceImpl - enter dumb mode [project]
+2025-12-13 18:07:39,498 [ 354972]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) UnindexedFilesIndexer[project, 13296 files, reason: changes in: "Module 'url-shortener' (all roots)", "JDK 17 /root/.jdks/ms-17.0.17", "Library Maven: ch.qos.logback:logback-classic:1.5.11 (#1 class roots, #0 source roots)", "Library Maven: ch.qos.logback:logback-core:1.5.11 (#1 class roots, #0 source roots)", "Library Maven: com.beust:jcommander:1.82 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.core:jackson-annotations:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.core:jackson-core:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.core:jackson-databind:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.17.2 (#1 class roots, #0 source roots)" and 33 iterators more]
+2025-12-13 18:07:39,500 [ 354974]   INFO - #c.i.u.i.c.IndexUpdateRunner - Using 16 workers for indexing and 4 for writing indexes
+2025-12-13 18:07:42,484 [ 357958]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 12 finished gracefully
+2025-12-13 18:07:42,486 [ 357960]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 15 finished gracefully
+2025-12-13 18:07:42,485 [ 357959]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 1 finished gracefully
+2025-12-13 18:07:42,485 [ 357959]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 14 finished gracefully
+2025-12-13 18:07:42,485 [ 357959]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 0 finished gracefully
+2025-12-13 18:07:42,485 [ 357959]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 3 finished gracefully
+2025-12-13 18:07:42,492 [ 357966]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 13 finished gracefully
+2025-12-13 18:07:42,490 [ 357964]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 10 finished gracefully
+2025-12-13 18:07:42,490 [ 357964]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 5 finished gracefully
+2025-12-13 18:07:42,490 [ 357964]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 7 finished gracefully
+2025-12-13 18:07:42,488 [ 357962]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 11 finished gracefully
+2025-12-13 18:07:42,497 [ 357971]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 9 finished gracefully
+2025-12-13 18:07:42,498 [ 357972]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 6 finished gracefully
+2025-12-13 18:07:42,500 [ 357974]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 4 finished gracefully
+2025-12-13 18:07:42,505 [ 357979]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 8 finished gracefully
+2025-12-13 18:07:42,517 [ 357991]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 2 finished gracefully
+2025-12-13 18:07:42,550 [ 358024]   INFO - #c.i.u.i.ProjectChangedFilesScanner - Retrieving changed during indexing files of project : 0 to update, calculated in 0ms
+2025-12-13 18:07:42,551 [ 358025]   INFO - #c.i.u.i.UnindexedFilesIndexer - Finished for project. Unindexed files update took 3051ms; general responsiveness: ok; EDT responsiveness: ok
+2025-12-13 18:07:42,575 [ 358049]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) UnindexedFilesIndexer[project, 13296 files, reason: changes in: "Module 'url-shortener' (all roots)", "JDK 17 /root/.jdks/ms-17.0.17", "Library Maven: ch.qos.logback:logback-classic:1.5.11 (#1 class roots, #0 source roots)", "Library Maven: ch.qos.logback:logback-core:1.5.11 (#1 class roots, #0 source roots)", "Library Maven: com.beust:jcommander:1.82 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.core:jackson-annotations:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.core:jackson-core:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.core:jackson-databind:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.17.2 (#1 class roots, #0 source roots)", "Library Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.17.2 (#1 class roots, #0 source roots)" and 33 iterators more]
+2025-12-13 18:07:42,577 [ 358051]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [project]
+2025-12-13 18:07:42,578 [ 358052]   INFO - #c.i.o.p.UnindexedFilesScannerExecutor - [15375f63] Running task: com.intellij.util.indexing.UnindexedFilesScannerExecutorImpl$ScheduledScanningTask@63b13894
+2025-12-13 18:07:42,580 [ 358054]   INFO - #c.i.u.i.UnindexedFilesScanner - [15375f63], scanning stage: DelayedPushProperties
+2025-12-13 18:07:42,581 [ 358055]   INFO - #c.i.u.i.UnindexedFilesScanner - Started scanning for indexing of project. Reason: changes in: "Library Maven: org.apache.commons:commons-compress:1.24.0 (#1 class roots, #0 source roots)", "Library Maven: org.apache.kafka:kafka-clients:3.7.1 (#1 class roots, #0 source roots)", "Library Maven: org.apache.logging.log4j:log4j-api:2.23.1 (#1 class roots, #0 source roots)", "Library Maven: org.apache.logging.log4j:log4j-to-slf4j:2.23.1 (#1 class roots, #0 source roots)", "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.31 (#1 class roots, #0 source roots)", "Library Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.31 (#1 class roots, #0 source roots)", "Library Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.31 (#1 class roots, #0 source roots)", "Library Maven: org.apiguardian:apiguardian-api:1.1.2 (#1 class roots, #0 source roots)", "Library Maven: org.assertj:assertj-core:3.25.3 (#1 class roots, #0 source roots)", "Library Maven: org.awaitility:awaitility:4.2.2 (#1 class roots, #0 source roots)" and 62 iterators more
+2025-12-13 18:07:42,580 [ 358054]   INFO - STDOUT - [IDE]: Task 'Updating indexes' ended
+2025-12-13 18:07:42,582 [ 358056]   INFO - #c.i.u.i.UnindexedFilesScanner - [15375f63], scanning stage: CreatingIterators
+2025-12-13 18:07:42,583 [ 358057]   INFO - #c.i.u.i.UnindexedFilesScanner - [15375f63], scanning stage: CollectingIndexableFiles
+2025-12-13 18:07:42,584 [ 358058]   INFO - #c.i.u.i.UnindexedFilesScanner - Scanning of project uses 16 scanning threads
+2025-12-13 18:07:42,601 [ 358075]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file apiguardian-api-1.1.2.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=94120, fileInfo='apiguardian-api-1.1.2.jar(id=94120)'}] and removers: []; 
+2025-12-13 18:07:42,603 [ 358077]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of API.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file API.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107247, fileInfo='API.class(id=107247)'}] and removers: []; 
+2025-12-13 18:07:42,605 [ 358079]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of API$Status.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file API$Status.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107241, fileInfo='API$Status.class(id=107241)'}] and removers: []; 
+2025-12-13 18:07:42,607 [ 358081]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file hamcrest-core-2.2.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=93983, fileInfo='hamcrest-core-2.2.jar(id=93983)'}] and removers: []; 
+2025-12-13 18:07:42,607 [ 358081]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of LICENSE by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Trigram.Index->NOT_INDEXED,IdIndex->NOT_INDEXED,]. Scanner has updated file LICENSE with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107269, fileInfo='LICENSE(id=107269)'}] and removers: []; 
+2025-12-13 18:07:42,608 [ 358082]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of HamcrestCoreIsDeprecated.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file HamcrestCoreIsDeprecated.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107445, fileInfo='HamcrestCoreIsDeprecated.class(id=107445)'}] and removers: []; 
+2025-12-13 18:07:42,609 [ 358083]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of MANIFEST.MF by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Trigram.Index->NOT_INDEXED,java.source.module.name->NOT_INDEXED,IdIndex->NOT_INDEXED,]. Scanner has updated file MANIFEST.MF with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107265, fileInfo='MANIFEST.MF(id=107265)'}] and removers: []; 
+2025-12-13 18:07:42,610 [ 358084]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of MANIFEST.MF by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Trigram.Index->NOT_INDEXED,java.source.module.name->NOT_INDEXED,IdIndex->NOT_INDEXED,]. Scanner has updated file MANIFEST.MF with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107458, fileInfo='MANIFEST.MF(id=107458)'}] and removers: []; 
+2025-12-13 18:07:42,612 [ 358086]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of hamcrest-core-is-deprecated.txt by request of indexes: [org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex->NOT_INDEXED,filetypes->NOT_INDEXED,Trigram.Index->NOT_INDEXED,IdIndex->NOT_INDEXED,]. Scanner has updated file hamcrest-core-is-deprecated.txt with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107282, fileInfo='hamcrest-core-is-deprecated.txt(id=107282)'}] and removers: []; 
+2025-12-13 18:07:42,611 [ 358085]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of module-info.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file module-info.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107184, fileInfo='module-info.class(id=107184)'}] and removers: []; 
+2025-12-13 18:07:42,612 [ 358086]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file log4j-to-slf4j-2.23.1.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=93955, fileInfo='log4j-to-slf4j-2.23.1.jar(id=93955)'}] and removers: []; 
+2025-12-13 18:07:42,615 [ 358089]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of Activator.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file Activator.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107313, fileInfo='Activator.class(id=107313)'}] and removers: []; 
+2025-12-13 18:07:42,616 [ 358090]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scheduling indexing of SLF4JLogger.class by request of indexes: [org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex->NOT_INDEXED,bytecodeAnalysis->NOT_INDEXED,org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex->NOT_INDEXED,KotlinBinaryRootToPackageIndex->NOT_INDEXED,KotlinTopLevelCallableByPackageShortNameIndex->NOT_INDEXED,KotlinTopLevelClassLikeDeclarationByPackageShortNameIndex->NOT_INDEXED,filetypes->NOT_INDEXED,IdIndex->NOT_INDEXED,Stubs->NOT_INDEXED,]. Scanner has updated file SLF4JLogger.class with appliers: [SingleIndexValueApplier{indexId=filetypes, inputId=107302, fileInfo='SLF4JLogger.class(id=107302)'}] and removers: []; 
+2025-12-13 18:07:42,619 [ 358093]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file annotations-17.0.0.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=94135, fileInfo='annotations-17.0.0.jar(id=94135)'}] and removers: []; 
+2025-12-13 18:07:42,622 [ 358096]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file junit-jupiter-5.10.5.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=94124, fileInfo='junit-jupiter-5.10.5.jar(id=94124)'}] and removers: []; 
+2025-12-13 18:07:42,648 [ 358122]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file awaitility-4.2.2.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=93979, fileInfo='awaitility-4.2.2.jar(id=93979)'}] and removers: []; 
+2025-12-13 18:07:42,657 [ 358131]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file HdrHistogram-2.2.2.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=93921, fileInfo='HdrHistogram-2.2.2.jar(id=93921)'}] and removers: []; 
+2025-12-13 18:07:42,657 [ 358131]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file LatencyUtils-2.0.3.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=94158, fileInfo='LatencyUtils-2.0.3.jar(id=94158)'}] and removers: []; 
+2025-12-13 18:07:42,673 [ 358147]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file junit-platform-commons-1.10.5.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=93896, fileInfo='junit-platform-commons-1.10.5.jar(id=93896)'}] and removers: []; 
+2025-12-13 18:07:42,686 [ 358160]   INFO - #c.i.u.i.IndexingReasonExplanationLogger - Scanner has updated file mockito-junit-jupiter-5.11.0.jar with appliers: [SingleIndexValueApplier{indexId=java.auto.module.name, inputId=94115, fileInfo='mockito-junit-jupiter-5.11.0.jar(id=94115)'}] and removers: []; 
+2025-12-13 18:07:46,205 [ 361679]   INFO - #c.i.u.i.UnindexedFilesScanner - Scanning completed for project. Number of scanned files: 35221; number of files for indexing: 34371
+2025-12-13 18:07:46,208 [ 361682]   INFO - #c.i.o.p.UnindexedFilesScannerExecutor - [15375f63] Task finished: com.intellij.util.indexing.UnindexedFilesScannerExecutorImpl$ScheduledScanningTask@63b13894
+2025-12-13 18:07:46,209 [ 361683]   INFO - #c.i.o.p.DumbServiceImpl - enter dumb mode [project]
+2025-12-13 18:07:46,211 [ 361685]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) UnindexedFilesIndexer[project, 34371 files, reason: changes in: "Library Maven: org.apache.commons:commons-compress:1.24.0 (#1 class roots, #0 source roots)", "Library Maven: org.apache.kafka:kafka-clients:3.7.1 (#1 class roots, #0 source roots)", "Library Maven: org.apache.logging.log4j:log4j-api:2.23.1 (#1 class roots, #0 source roots)", "Library Maven: org.apache.logging.log4j:log4j-to-slf4j:2.23.1 (#1 class roots, #0 source roots)", "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.31 (#1 class roots, #0 source roots)", "Library Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.31 (#1 class roots, #0 source roots)", "Library Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.31 (#1 class roots, #0 source roots)", "Library Maven: org.apiguardian:apiguardian-api:1.1.2 (#1 class roots, #0 source roots)", "Library Maven: org.assertj:assertj-core:3.25.3 (#1 class roots, #0 source roots)", "Library Maven: org.awaitility:awaitility:4.2.2 (#1 class roots, #0 source roots)" and 62 iterators more]
+2025-12-13 18:07:46,214 [ 361688]   INFO - #c.i.u.i.c.IndexUpdateRunner - Using 16 workers for indexing and 4 for writing indexes
+2025-12-13 18:07:52,475 [ 367949]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 1 finished gracefully
+2025-12-13 18:07:52,475 [ 367949]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 10 finished gracefully
+2025-12-13 18:07:52,477 [ 367951]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 12 finished gracefully
+2025-12-13 18:07:52,479 [ 367953]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 13 finished gracefully
+2025-12-13 18:07:52,480 [ 367954]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 15 finished gracefully
+2025-12-13 18:07:52,476 [ 367950]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 14 finished gracefully
+2025-12-13 18:07:52,480 [ 367954]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 2 finished gracefully
+2025-12-13 18:07:52,481 [ 367955]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 9 finished gracefully
+2025-12-13 18:07:52,480 [ 367954]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 0 finished gracefully
+2025-12-13 18:07:52,479 [ 367953]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 4 finished gracefully
+2025-12-13 18:07:52,479 [ 367953]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 6 finished gracefully
+2025-12-13 18:07:52,478 [ 367952]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 11 finished gracefully
+2025-12-13 18:07:52,478 [ 367952]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 5 finished gracefully
+2025-12-13 18:07:52,481 [ 367955]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 3 finished gracefully
+2025-12-13 18:07:52,484 [ 367958]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 7 finished gracefully
+2025-12-13 18:07:52,485 [ 367959]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 8 finished gracefully
+2025-12-13 18:07:53,065 [ 368539]   INFO - #c.i.u.i.ProjectChangedFilesScanner - Retrieving changed during indexing files of project : 0 to update, calculated in 0ms
+2025-12-13 18:07:53,066 [ 368540]   INFO - #c.i.u.i.UnindexedFilesIndexer - Finished for project. Unindexed files update took 6852ms; general responsiveness: ok; EDT responsiveness: ok
+2025-12-13 18:07:53,070 [ 368544]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) UnindexedFilesIndexer[project, 34371 files, reason: changes in: "Library Maven: org.apache.commons:commons-compress:1.24.0 (#1 class roots, #0 source roots)", "Library Maven: org.apache.kafka:kafka-clients:3.7.1 (#1 class roots, #0 source roots)", "Library Maven: org.apache.logging.log4j:log4j-api:2.23.1 (#1 class roots, #0 source roots)", "Library Maven: org.apache.logging.log4j:log4j-to-slf4j:2.23.1 (#1 class roots, #0 source roots)", "Library Maven: org.apache.tomcat.embed:tomcat-embed-core:10.1.31 (#1 class roots, #0 source roots)", "Library Maven: org.apache.tomcat.embed:tomcat-embed-el:10.1.31 (#1 class roots, #0 source roots)", "Library Maven: org.apache.tomcat.embed:tomcat-embed-websocket:10.1.31 (#1 class roots, #0 source roots)", "Library Maven: org.apiguardian:apiguardian-api:1.1.2 (#1 class roots, #0 source roots)", "Library Maven: org.assertj:assertj-core:3.25.3 (#1 class roots, #0 source roots)", "Library Maven: org.awaitility:awaitility:4.2.2 (#1 class roots, #0 source roots)" and 62 iterators more]
+2025-12-13 18:07:53,072 [ 368546]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [project]
+2025-12-13 18:07:53,074 [ 368548]   INFO - STDOUT - [IDE]: Task 'Updating indexes' ended
+2025-12-13 18:07:58,092 [ 373566]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 4m 59s
+2025-12-13 18:07:58,093 [ 373567]   INFO - STDOUT - Keep running Project configuration ... so far 4m 59s
+2025-12-13 18:08:28,086 [ 403560]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 5m 29s
+2025-12-13 18:08:28,087 [ 403561]   INFO - STDOUT - Keep running Project configuration ... so far 5m 29s
+2025-12-13 18:08:58,089 [ 433563]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 5m 59s
+2025-12-13 18:08:58,090 [ 433564]   INFO - STDOUT - Keep running Project configuration ... so far 5m 59s
+2025-12-13 18:09:28,081 [ 463555]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 6m 29s
+2025-12-13 18:09:28,082 [ 463556]   INFO - STDOUT - Keep running Project configuration ... so far 6m 29s
+2025-12-13 18:09:58,079 [ 493553]   INFO - #o.j.q.s.i.r.ConsoleLog - Keep running Project configuration ... so far 6m 59s
+2025-12-13 18:09:58,080 [ 493554]   INFO - STDOUT - Keep running Project configuration ... so far 6m 59s
+2025-12-13 18:10:05,120 [ 500594]   INFO - #o.j.i.maven - maven plugin resolution finished, unresolved: []
+2025-12-13 18:10:05,549 [ 501023]   WARN - #o.j.i.maven - updateAllMavenProjects finished: incremental=true, MavenProjectAware.reloadProject, undefined modifications project
+2025-12-13 18:10:05,552 [ 501026]   WARN - #o.j.i.maven - updateAllMavenProjects started: incremental=true, MavenProjectsManagerEx.addManagedFilesWithProfilesAndUpdate project
+2025-12-13 18:10:05,574 [ 501048]   INFO - #o.j.i.maven - Importing Maven project using Workspace API
+2025-12-13 18:10:05,575 [ 501049]   INFO - #o.j.i.maven - [maven import] applying models to workspace model took 1ms
+2025-12-13 18:10:05,576 [ 501050]   INFO - #o.j.i.maven - Updating index list for project Project(name=project, containerState=COMPONENT_CREATED, componentStore=/data/project)
+2025-12-13 18:10:05,576 [ 501050]   INFO - #o.j.i.maven - updating index list for Project(name=project, containerState=COMPONENT_CREATED, componentStore=/data/project) - local:local:/data/cache/.m2 remains the same, nothing to update
+2025-12-13 18:10:05,777 [ 501251]   WARN - #o.j.i.maven - updateAllMavenProjects finished: incremental=true, MavenProjectsManagerEx.addManagedFilesWithProfilesAndUpdate project
+2025-12-13 18:10:05,785 [ 501259]   INFO - #c.i.o.p.DumbServiceImpl - enter dumb mode [project]
+2025-12-13 18:10:05,794 [ 501268]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@480a838f (reason: Push on VFS changes)
+2025-12-13 18:10:05,794 [ 501268]   INFO - STDOUT - 'external-system' is completed.
+2025-12-13 18:10:05,795 [ 501269]   INFO - STDOUT - 'dumb-mode' is in progress...
+2025-12-13 18:10:05,808 [ 501282]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@480a838f (reason: Push on VFS changes)
+2025-12-13 18:10:05,809 [ 501283]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [project]
+2025-12-13 18:10:05,811 [ 501285]   INFO - STDOUT - [IDE]: Task 'Updating indexes' ended
+2025-12-13 18:10:05,812 [ 501286]   INFO - STDOUT - 'dumb-mode' is completed.
+2025-12-13 18:10:05,823 [ 501297]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.SdkEntity to files
+2025-12-13 18:10:05,833 [ 501307]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.LibraryEntity to files
+2025-12-13 18:10:06,040 [ 501514]   INFO - #c.i.a.o.PathMacrosImpl - Saved path macros: {MAVEN_REPOSITORY=/data/cache/.m2}
+2025-12-13 18:10:06,057 [ 501531]   INFO - #c.i.c.ComponentStoreImpl - Saving appDebuggerSettings took 44 ms, FeatureUsageStatistics took 25 ms, FileTypeManager took 11 ms
+2025-12-13 18:10:06,129 [ 501603]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.SdkEntity to files
+2025-12-13 18:10:06,131 [ 501605]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.LibraryEntity to files
+2025-12-13 18:10:06,144 [ 501618]   INFO - #c.i.u.i.p.ProjectIndexableFilesFilterHealthCheck - Following files are NOT indexable but they were found in filter. Errors count: 58. Examples:
+file id=1346 path=/data/project/target
+file id=3383 path=/data/project/target/test-classes
+file id=3384 path=/data/project/target/classes
+file id=3385 path=/data/project/target/generated-sources
+file id=3386 path=/data/project/target/generated-test-sources
+...
+2025-12-13 18:10:06,146 [ 501620]   WARN - #c.i.u.i.p.ProjectIndexableFilesFilterHealthCheck - Following files are indexable but they were NOT found in filter. Errors count: 13. Examples:
+file id=145477 path=/data/project/results/log/open-telemetry-meters.2025-12-13-18-07-44.json
+file id=145478 path=/data/project/results/log/open-telemetry-meters.2025-12-13-18-08-44.json
+file id=145479 path=/data/project/results/log/open-telemetry-meters.2025-12-13-18-09-44.json
+file id=145480 path=/data/project/results/log/indexing-diagnostic/project.15375f63/diagnostic-2025-12-13-18-07-39.498.json
+file id=145481 path=/data/project/results/log/indexing-diagnostic/project.15375f63/diagnostic-2025-12-13-18-07-46.211.json
+...
+2025-12-13 18:10:06,147 [ 501621]   INFO - #c.i.a.o.PathMacrosImpl - Saved path macros: {MAVEN_REPOSITORY=/data/cache/.m2}
+2025-12-13 18:10:06,452 [ 501926]   INFO - #c.i.c.ComponentStoreImpl - Saving Project(name=project, containerState=COMPONENT_CREATED, componentStore=/data/project)Kotlin2JvmCompilerArguments took 11 ms, XDebuggerManager took 38 ms
+2025-12-13 18:10:06,534 [ 502008]   INFO - #c.i.o.p.DumbServiceImpl - enter dumb mode [project]
+2025-12-13 18:10:06,543 [ 502017]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@213170d (reason: Push on VFS changes)
+2025-12-13 18:10:06,556 [ 502030]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@213170d (reason: Push on VFS changes)
+2025-12-13 18:10:06,558 [ 502032]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [project]
+2025-12-13 18:10:06,560 [ 502034]   INFO - STDOUT - [IDE]: Task 'Updating indexes' ended
+2025-12-13 18:10:06,607 [ 502081]   INFO - STDOUT - Configuration phase is completed. Initiating another phase to cover possible side effects...
+2025-12-13 18:10:06,608 [ 502082]   INFO - STDOUT - All configuration phases are completed.
+2025-12-13 18:10:06,701 [ 502175]   INFO - #o.j.q.s.i.r.ConsoleLog - The Project configuration stage completed in 7m 8s
+2025-12-13 18:10:06,702 [ 502176]   INFO - STDOUT - The Project configuration stage completed in 7m 8s
+2025-12-13 18:10:06,705 [ 502179]   WARN - #o.j.q.j.m.QodanaMavenReimporter - Re-importing maven project after configuration: [url-shortener]
+2025-12-13 18:10:06,706 [ 502180]   WARN - #o.j.q.j.m.QodanaMavenReimporter - Scheduling force update maven project
+2025-12-13 18:10:06,708 [ 502182]   WARN - #o.j.q.j.m.QodanaMavenReimporter - Awaiting for maven project import completion
+2025-12-13 18:10:06,710 [ 502184]   WARN - #o.j.i.maven - updateMavenProjects started: incremental=false, MavenProjectsManagerEx.scheduleForceUpdateMavenProjects 1 0 project
+2025-12-13 18:10:07,283 [ 502757]   INFO - #o.j.i.maven - Importing Maven project using Workspace API
+2025-12-13 18:10:07,407 [ 502881]   INFO - #o.j.i.m.i.w.WorkspaceProjectImporter - Project model updated to version 6 (attempts: 1, previous version: 6)
+2025-12-13 18:10:07,408 [ 502882]   INFO - #o.j.i.maven - [maven import] applying models to workspace model took 125ms
+2025-12-13 18:10:07,409 [ 502883]   INFO - #o.j.i.maven - Updating index list for project Project(name=project, containerState=COMPONENT_CREATED, componentStore=/data/project)
+2025-12-13 18:10:07,410 [ 502884]   INFO - #o.j.i.maven - updating index list for Project(name=project, containerState=COMPONENT_CREATED, componentStore=/data/project) - local:local:/data/cache/.m2 remains the same, nothing to update
+2025-12-13 18:10:07,412 [ 502886]   WARN - #o.j.q.j.m.QodanaMavenReimporter - Maven project reimport completed
+2025-12-13 18:10:07,416 [ 502890]   WARN - #o.j.q.j.m.QodanaMavenReimporter - Await end of dumb mode
+2025-12-13 18:10:07,418 [ 502892]   WARN - #o.j.q.j.m.QodanaMavenReimporter - Now running in smart mode
+2025-12-13 18:10:07,422 [ 502896]   INFO - o.j.q.i.linter - Loading dynamic inspections (FlexInspect)
+2025-12-13 18:10:07,424 [ 502898]   INFO - o.j.q.i.linter - FlexInspect: finished loading
+- total number of inspection.kts files: 0}
+- number of compiled inspection.kts files: 0}
+- number of inspections from compiled inspection.kts files: 0}
+- number of failed to compile inspection.kts files: 0} 
+2025-12-13 18:10:07,669 [ 503143]   INFO - #c.i.o.p.DumbServiceImpl - enter dumb mode [project]
+2025-12-13 18:10:07,679 [ 503153]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@30a0117e (reason: Push on VFS changes)
+2025-12-13 18:10:07,684 [ 503158]   WARN - #o.j.i.maven - updateMavenProjects finished: incremental=false, MavenProjectsManagerEx.scheduleForceUpdateMavenProjects 1 0 project
+2025-12-13 18:10:07,693 [ 503167]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) com.intellij.openapi.roots.impl.PushedFilePropertiesUpdaterImpl$MyDumbModeTask@30a0117e (reason: Push on VFS changes)
+2025-12-13 18:10:07,694 [ 503168]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Running task: (dumb mode task) UnindexedFilesIndexer[project, 0 files, reason: On refresh of files in project]
+2025-12-13 18:10:07,697 [ 503171]   INFO - #c.i.u.i.c.IndexUpdateRunner - Using 16 workers for indexing and 4 for writing indexes
+2025-12-13 18:10:07,699 [ 503173]   INFO - #c.i.u.i.ProjectChangedFilesScanner - Retrieving changed during indexing files of project : 20 to update, calculated in 1ms
+2025-12-13 18:10:07,735 [ 503209]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 5 finished gracefully
+2025-12-13 18:10:07,738 [ 503212]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 8 finished gracefully
+2025-12-13 18:10:07,740 [ 503214]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 6 finished gracefully
+2025-12-13 18:10:07,745 [ 503219]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 0 finished gracefully
+2025-12-13 18:10:07,744 [ 503218]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 1 finished gracefully
+2025-12-13 18:10:07,743 [ 503217]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 2 finished gracefully
+2025-12-13 18:10:07,749 [ 503223]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 15 finished gracefully
+2025-12-13 18:10:07,761 [ 503235]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 7 finished gracefully
+2025-12-13 18:10:07,764 [ 503238]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 14 finished gracefully
+2025-12-13 18:10:07,771 [ 503245]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 13 finished gracefully
+2025-12-13 18:10:07,775 [ 503249]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 10 finished gracefully
+2025-12-13 18:10:07,800 [ 503274]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 4 finished gracefully
+2025-12-13 18:10:07,813 [ 503287]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 12 finished gracefully
+2025-12-13 18:10:07,822 [ 503296]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 3 finished gracefully
+2025-12-13 18:10:07,853 [ 503327]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 9 finished gracefully
+2025-12-13 18:10:07,888 [ 503362]   INFO - #c.i.u.i.c.IndexUpdateRunner - Coroutine 11 finished gracefully
+2025-12-13 18:10:07,910 [ 503384]   INFO - #c.i.u.i.UnindexedFilesIndexer - Finished for project. Unindexed files update took 213ms; general responsiveness: ok; EDT responsiveness: ok
+2025-12-13 18:10:07,914 [ 503388]   INFO - #c.i.o.p.MergingQueueGuiExecutor - Task finished: (dumb mode task) UnindexedFilesIndexer[project, 0 files, reason: On refresh of files in project]
+2025-12-13 18:10:07,916 [ 503390]   INFO - #c.i.o.p.DumbServiceImpl - exit dumb mode [project]
+2025-12-13 18:10:10,066 [ 505540]   INFO - STDOUT - Initializing project…Inspecting with the 'qodana.starter' profile
+2025-12-13 18:10:10,169 [ 505643]   INFO - #o.j.q.s.p.QodanaProfile - The 'qodana.sanity' profile is configured for sanity checks
+2025-12-13 18:10:10,451 [ 505925]   INFO - #o.j.q.s.p.QodanaProfile - The 'qodana.recommended' profile is configured for promo checks
+2025-12-13 18:10:14,062 [ 509536]   INFO - #o.j.q.s.i.r.ConsoleLog - Preparing for the Project analysis stage ...
+2025-12-13 18:10:14,063 [ 509537]   INFO - STDOUT - Preparing for the Project analysis stage ...
+2025-12-13 18:10:14,155 [ 509629]   INFO - #c.i.a.AnalysisScope - Scanning scope took 4 ms
+2025-12-13 18:10:14,168 [ 509642]   INFO - #c.i.c.e.GlobalJavaInspectionContextImpl - Processing external usages finished in 0 ms
+2025-12-13 18:10:14,334 [ 509808]   INFO - STDOUT - Analyzing code 1%
+2025-12-13 18:10:14,379 [ 509853]   INFO - STDOUT - Analyzing code 2%
+2025-12-13 18:10:14,383 [ 509857]   INFO - STDOUT - Analyzing code 3%
+2025-12-13 18:10:14,385 [ 509859]   INFO - STDOUT - Analyzing code 2%
+2025-12-13 18:10:14,606 [ 510080]   INFO - #c.i.x.Html5SchemaProvider - HTML5_SCHEMA_LOCATION = /opt/idea/lib/app.jar!/resources/html5-schema/html5.rnc
+2025-12-13 18:10:14,643 [ 510117]   INFO - STDOUT - Analyzing code 4%
+2025-12-13 18:10:14,659 [ 510133]   INFO - STDOUT - Analyzing code 5%
+2025-12-13 18:10:14,735 [ 510209]   INFO - STDOUT - Analyzing code 6%
+2025-12-13 18:10:14,831 [ 510305]   INFO - STDOUT - Analyzing code 7%
+2025-12-13 18:10:14,839 [ 510313]   INFO - STDOUT - Analyzing code 8%
+2025-12-13 18:10:14,935 [ 510409]   INFO - STDOUT - Analyzing code 9%
+2025-12-13 18:10:14,973 [ 510447]   INFO - STDOUT - Analyzing code 10%
+2025-12-13 18:10:14,980 [ 510454]   INFO - STDOUT - Analyzing code 11%
+2025-12-13 18:10:14,992 [ 510466]   INFO - STDOUT - Analyzing code 12%
+2025-12-13 18:10:14,996 [ 510470]   INFO - STDOUT - Analyzing code 13%
+2025-12-13 18:10:15,002 [ 510476]   INFO - STDOUT - Analyzing code 14%
+2025-12-13 18:10:15,087 [ 510561]   INFO - STDOUT - Analyzing code 15%
+2025-12-13 18:10:15,104 [ 510578]   INFO - STDOUT - Analyzing code 16%
+2025-12-13 18:10:15,107 [ 510581]   INFO - STDOUT - Analyzing code 16%
+2025-12-13 18:10:15,209 [ 510683]   INFO - STDOUT - Analyzing code 17%
+2025-12-13 18:10:15,218 [ 510692]   INFO - STDOUT - Analyzing code 18%
+2025-12-13 18:10:15,540 [ 511014]   INFO - STDOUT - Analyzing code 19%
+2025-12-13 18:10:15,641 [ 511115]   INFO - STDOUT - Analyzing code 20%
+2025-12-13 18:10:15,818 [ 511292]   INFO - STDOUT - Analyzing code 21%
+2025-12-13 18:10:15,872 [ 511346]   INFO - STDOUT - Analyzing code 22%
+2025-12-13 18:10:15,964 [ 511438]   INFO - STDOUT - Analyzing code 23%
+2025-12-13 18:10:15,971 [ 511445]   INFO - STDOUT - Analyzing code 24%
+2025-12-13 18:10:15,988 [ 511462]   INFO - STDOUT - Analyzing code 25%
+2025-12-13 18:10:16,001 [ 511475]   INFO - STDOUT - Analyzing code 26%
+2025-12-13 18:10:16,002 [ 511476]   INFO - STDOUT - Analyzing code 27%
+2025-12-13 18:10:16,008 [ 511482]   INFO - STDOUT - Analyzing code 29%
+2025-12-13 18:10:16,012 [ 511486]   INFO - STDOUT - Analyzing code 29%
+2025-12-13 18:10:16,042 [ 511516]   INFO - STDOUT - Analyzing code 30%
+2025-12-13 18:10:16,047 [ 511521]   INFO - STDOUT - Analyzing code 31%
+2025-12-13 18:10:16,048 [ 511522]   INFO - STDOUT - Analyzing code 32%
+2025-12-13 18:10:16,811 [ 512285]   INFO - STDOUT - Analyzing code 33%
+2025-12-13 18:10:16,825 [ 512299]   INFO - STDOUT - Analyzing code 34%
+2025-12-13 18:10:16,928 [ 512402]   INFO - STDOUT - Analyzing code 35%
+2025-12-13 18:10:16,940 [ 512414]   INFO - STDOUT - Analyzing code 36%
+2025-12-13 18:10:17,039 [ 512513]   INFO - STDOUT - Analyzing code 37%
+2025-12-13 18:10:17,046 [ 512520]   INFO - STDOUT - Analyzing code 38%
+2025-12-13 18:10:17,151 [ 512625]   INFO - STDOUT - Analyzing code 39%
+2025-12-13 18:10:17,179 [ 512653]   INFO - STDOUT - Analyzing code 40%
+2025-12-13 18:10:17,185 [ 512659]   INFO - STDOUT - Analyzing code 41%
+2025-12-13 18:10:17,227 [ 512701]   INFO - STDOUT - Analyzing code 42%
+2025-12-13 18:10:17,235 [ 512709]   INFO - STDOUT - Analyzing code 43%
+2025-12-13 18:10:17,237 [ 512711]   INFO - STDOUT - Analyzing code 44%
+2025-12-13 18:10:17,261 [ 512735]   INFO - STDOUT - Analyzing code 45%
+2025-12-13 18:10:17,723 [ 513197]   INFO - STDOUT - Analyzing code 46%
+2025-12-13 18:10:17,795 [ 513269]   INFO - STDOUT - Analyzing code 47%
+2025-12-13 18:10:18,024 [ 513498]   INFO - STDOUT - Analyzing code 48%
+2025-12-13 18:10:19,263 [ 514737]   INFO - STDOUT - Analyzing code 49%
+2025-12-13 18:10:19,380 [ 514854]   INFO - STDOUT - Analyzing code 50%
+2025-12-13 18:10:19,459 [ 514933]   INFO - STDOUT - Analyzing code 51%
+2025-12-13 18:10:19,868 [ 515342]   INFO - STDOUT - Analyzing code 52%
+2025-12-13 18:10:19,880 [ 515354]   INFO - STDOUT - Analyzing code 53%
+2025-12-13 18:10:19,884 [ 515358]   INFO - STDOUT - Analyzing code 54%
+2025-12-13 18:10:21,473 [ 516947]   INFO - #o.j.q.s.i.r.ConsoleLog - The Project analysis stage completed in 7s
+2025-12-13 18:10:21,473 [ 516947]   INFO - STDOUT - The Project analysis stage completed in 7s
+2025-12-13 18:10:21,477 [ 516951]   INFO - #o.j.q.s.i.r.AsyncInspectionToolResultWriter - Async result writer started
+2025-12-13 18:10:21,551 [ 517025]   INFO - #o.j.q.s.s.n.RuntimeNotificationCollector$NotificationReportContributor - No tool errors to report to sarif file
+2025-12-13 18:10:21,846 [ 517320]   INFO - STDOUT - 
+2025-12-13 18:10:21,846 [ 517320]   INFO - STDOUT - Qodana - Detailed summary
+2025-12-13 18:10:21,846 [ 517320]   INFO - STDOUT - Analysis results: 0 problem detected
+2025-12-13 18:10:21,847 [ 517321]   INFO - STDOUT - 
+2025-12-13 18:10:22,302 [ 517776]   INFO - #o.j.q.s.i.r.QodanaInspectionApplication - sessionId: 25121318-f0d1e02f04a0
+2025-12-13 18:10:22,470 [ 517944]   INFO - #c.i.u.i.PersistentDirtyFilesQueue - Dirty file ids stored. Size: 0. Index: 0 Path: /data/cache/idea/243/index/dirty-file-queues/15375f63
+2025-12-13 18:10:22,504 [ 517978]   INFO - #c.i.p.p.ProjectEntitiesStorage - Project ProjectId(id=1r9dbhv00j0mmc4blvo6) is disposed, removing entity
+2025-12-13 18:10:22,554 [ 518028]   INFO - #c.i.c.b.CompilerReferenceServiceBase - backward reference index reader is closed (didn't exist)
+2025-12-13 18:10:22,571 [ 518045]   INFO - #c.i.e.r.RemoteProcessSupport - Terminating: 127.0.0.1:62594/Maven36ServerImpl55da1cc9
+2025-12-13 18:10:22,572 [ 518046]   INFO - #c.i.e.r.RemoteProcessSupport - Remote process will terminate: null message = null
+2025-12-13 18:10:22,618 [ 518092]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.SdkEntity to files
+2025-12-13 18:10:22,620 [ 518094]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.LibraryEntity to files
+2025-12-13 18:10:22,632 [ 518106]   INFO - #c.i.a.o.PathMacrosImpl - Saved path macros: {MAVEN_REPOSITORY=/data/cache/.m2}
+2025-12-13 18:10:22,684 [ 518158]   INFO - #c.i.i.s.e.u.EventLogExternalUploader - Started external process for uploading event log
+2025-12-13 18:10:22,715 [ 518189]   INFO - #fleet.kernel.Transactor - shutting down kernel Kernel(1dq4ducfuc9s1sqnirv0)
+2025-12-13 18:10:22,722 [ 518196]   INFO - #o.j.i.BuiltInServer - web server stopped
+2025-12-13 18:10:22,729 [ 518203]   INFO - #c.i.u.i.FileBasedIndexImpl - Index dispose started
+2025-12-13 18:10:22,747 [ 518221]   INFO - #c.i.u.i.PersistentDirtyFilesQueue - Dirty file ids stored. Size: 2. Index: 2 Path: /data/cache/idea/243/index/dirty-file-ids
+2025-12-13 18:10:22,796 [ 518270]   INFO - #c.i.p.s.StubIndexImpl - StubIndexExtension-s were unloaded
+2025-12-13 18:10:22,797 [ 518271]   INFO - #c.i.p.s.SerializationManagerImpl - Start shutting down /data/cache/idea/243/index/rep.names
+2025-12-13 18:10:22,797 [ 518271]   INFO - #c.i.p.s.SerializationManagerImpl - Finished shutting down /data/cache/idea/243/index/rep.names
+2025-12-13 18:10:22,798 [ 518272]   INFO - #c.i.u.i.FileBasedIndexImpl - Index dispose completed in 69ms.
+2025-12-13 18:10:22,843 [ 518317]   INFO - #c.i.o.v.n.p.PersistentFSImpl - VFS dispose started
+2025-12-13 18:10:22,847 [ 518321]   INFO - #c.i.o.v.n.p.FSRecordsImpl - VFS closing
+2025-12-13 18:10:22,851 [ 518325]   INFO - #c.i.o.v.n.p.PersistentFSImpl - VFS dispose completed in 7 ms.
+2025-12-13 18:10:22,851 [ 518325]   INFO - #c.i.o.f.i.FileTypeDetectionService - 1483 auto-detected files. Detection took 1564 ms
+2025-12-13 18:10:22,912 [ 518386]   INFO - #c.i.p.i.b.AppStarter - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------
