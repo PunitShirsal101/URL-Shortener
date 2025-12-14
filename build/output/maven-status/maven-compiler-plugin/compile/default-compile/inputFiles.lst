@@ -8,6 +8,7 @@ C:\Workspace\URL-Shortener\src\main\java\com\shortscale\util\HashGenerator.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\Application.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\api\dto\AnalyticsEvent.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\api\dto\BulkShortenResponse.java
+C:\Workspace\URL-Shortener\src\main\java\com\shortscale\config\ResilienceConfig.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\service\UrlService.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\api\dto\ShortenResponse.java
 C:\Workspace\URL-Shortener\src\main\java\com\shortscale\config\WebSocketConfig.java

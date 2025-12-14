@@ -4,8 +4,14 @@ import com.shortscale.api.dto.*;
 import com.shortscale.model.UrlMapping;
 import com.shortscale.repository.RedisUrlRepository;
 import com.shortscale.util.HashGenerator;
+import io.github.resilience4j.bulkhead.annotation.Bulkhead;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
@@ -24,77 +30,91 @@ public class UrlService {
     private final Counter urlShortenedCounter;
     private final Counter urlClickedCounter;
 
-<span class="fc" id="L27">    public UrlService(RedisUrlRepository repository, HashGenerator hashGenerator, SimpMessagingTemplate messagingTemplate, KafkaTemplate&lt;String, AnalyticsEvent&gt; kafkaTemplate, MeterRegistry meterRegistry) {</span>
-<span class="fc" id="L28">        this.repository = repository;</span>
-<span class="fc" id="L29">        this.hashGenerator = hashGenerator;</span>
-<span class="fc" id="L30">        this.messagingTemplate = messagingTemplate;</span>
-<span class="fc" id="L31">        this.kafkaTemplate = kafkaTemplate;</span>
-<span class="fc" id="L32">        this.urlShortenedCounter = meterRegistry.counter(&quot;url_shortened_total&quot;);</span>
-<span class="fc" id="L33">        this.urlClickedCounter = meterRegistry.counter(&quot;url_clicked_total&quot;);</span>
-<span class="fc" id="L34">    }</span>
+<span class="fc" id="L33">    private static final Logger logger = LoggerFactory.getLogger(UrlService.class);</span>
 
+<span class="fc" id="L35">    public UrlService(RedisUrlRepository repository, HashGenerator hashGenerator, SimpMessagingTemplate messagingTemplate, KafkaTemplate&lt;String, AnalyticsEvent&gt; kafkaTemplate, MeterRegistry meterRegistry) {</span>
+<span class="fc" id="L36">        this.repository = repository;</span>
+<span class="fc" id="L37">        this.hashGenerator = hashGenerator;</span>
+<span class="fc" id="L38">        this.messagingTemplate = messagingTemplate;</span>
+<span class="fc" id="L39">        this.kafkaTemplate = kafkaTemplate;</span>
+<span class="fc" id="L40">        this.urlShortenedCounter = meterRegistry.counter(&quot;url_shortened_total&quot;);</span>
+<span class="fc" id="L41">        this.urlClickedCounter = meterRegistry.counter(&quot;url_clicked_total&quot;);</span>
+<span class="fc" id="L42">    }</span>
+
+    @Retry(name = &quot;urlShortenRetry&quot;)
+    @CircuitBreaker(name = &quot;urlCircuitBreaker&quot;)
+    @RateLimiter(name = &quot;urlRateLimiter&quot;)
+    @Bulkhead(name = &quot;urlBulkhead&quot;)
     public ShortenResponse shortenUrl(ShortenRequest request) {
-<span class="fc" id="L37">        String shortCode = request.getCustomShortCode();</span>
-<span class="pc bpc" id="L38" title="1 of 4 branches missed.">        if (shortCode == null || shortCode.isEmpty()) {</span>
-<span class="fc" id="L39">            shortCode = hashGenerator.generateShortCode();</span>
+<span class="fc" id="L49">        String shortCode = request.getCustomShortCode();</span>
+<span class="pc bpc" id="L50" title="1 of 4 branches missed.">        if (shortCode == null || shortCode.isEmpty()) {</span>
+<span class="fc" id="L51">            shortCode = hashGenerator.generateShortCode();</span>
         } else {
-<span class="fc bfc" id="L41" title="All 2 branches covered.">            if (repository.existsByShortCode(shortCode)) {</span>
-<span class="fc" id="L42">                throw new IllegalArgumentException(&quot;Custom short code already exists&quot;);</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (repository.existsByShortCode(shortCode)) {</span>
+<span class="fc" id="L54">                throw new IllegalArgumentException(&quot;Custom short code already exists&quot;);</span>
             }
         }
 
-<span class="fc" id="L46">        UrlMapping urlMapping = new UrlMapping();</span>
-<span class="fc" id="L47">        urlMapping.setId(System.currentTimeMillis()); // simple ID</span>
-<span class="fc" id="L48">        urlMapping.setShortCode(shortCode);</span>
-<span class="fc" id="L49">        urlMapping.setOriginalUrl(request.getOriginalUrl());</span>
-<span class="fc" id="L50">        urlMapping.setCreatedAt(LocalDateTime.now());</span>
-<span class="fc bfc" id="L51" title="All 4 branches covered.">        if (request.getTtlSeconds() != null &amp;&amp; request.getTtlSeconds() &gt; 0) {</span>
-<span class="fc" id="L52">            urlMapping.setExpiresAt(LocalDateTime.now().plusSeconds(request.getTtlSeconds()));</span>
+<span class="fc" id="L58">        UrlMapping urlMapping = new UrlMapping();</span>
+<span class="fc" id="L59">        urlMapping.setId(System.currentTimeMillis()); // simple ID</span>
+<span class="fc" id="L60">        urlMapping.setShortCode(shortCode);</span>
+<span class="fc" id="L61">        urlMapping.setOriginalUrl(request.getOriginalUrl());</span>
+<span class="fc" id="L62">        urlMapping.setCreatedAt(LocalDateTime.now());</span>
+<span class="fc bfc" id="L63" title="All 4 branches covered.">        if (request.getTtlSeconds() != null &amp;&amp; request.getTtlSeconds() &gt; 0) {</span>
+<span class="fc" id="L64">            urlMapping.setExpiresAt(LocalDateTime.now().plusSeconds(request.getTtlSeconds()));</span>
         }
-<span class="fc" id="L54">        urlMapping.setClickCount(0);</span>
+<span class="fc" id="L66">        urlMapping.setClickCount(0);</span>
 
-<span class="fc" id="L56">        repository.save(urlMapping);</span>
+<span class="fc" id="L68">        repository.save(urlMapping);</span>
 
-<span class="fc" id="L58">        ShortenResponse response = new ShortenResponse();</span>
-<span class="fc" id="L59">        response.setShortUrl(&quot;http://localhost:8080/&quot; + shortCode); // assuming port 8080</span>
-<span class="fc" id="L60">        response.setOriginalUrl(request.getOriginalUrl());</span>
-<span class="fc" id="L61">        response.setShortCode(shortCode);</span>
+<span class="fc" id="L70">        ShortenResponse response = new ShortenResponse();</span>
+<span class="fc" id="L71">        response.setShortUrl(&quot;http://localhost:8080/&quot; + shortCode); // assuming port 8080</span>
+<span class="fc" id="L72">        response.setOriginalUrl(request.getOriginalUrl());</span>
+<span class="fc" id="L73">        response.setShortCode(shortCode);</span>
 
         // Send Kafka event
-<span class="fc" id="L64">        kafkaTemplate.send(&quot;url-analytics&quot;, new AnalyticsEvent(shortCode, LocalDateTime.now(), &quot;shorten&quot;, null, null));</span>
-<span class="fc" id="L65">        urlShortenedCounter.increment(); // Increment the shorten URL counter</span>
+<span class="fc" id="L76">        kafkaTemplate.send(&quot;url-analytics&quot;, new AnalyticsEvent(shortCode, LocalDateTime.now(), &quot;shorten&quot;, null, null));</span>
+<span class="fc" id="L77">        urlShortenedCounter.increment(); // Increment the shorten URL counter</span>
 
-<span class="fc" id="L67">        return response;</span>
+<span class="fc" id="L79">        logger.info(&quot;Shortened URL: {} to {}&quot;, request.getOriginalUrl(), response.getShortUrl());</span>
+
+<span class="fc" id="L81">        return response;</span>
     }
 
+    @CircuitBreaker(name = &quot;urlCircuitBreaker&quot;, fallbackMethod = &quot;fallbackGetOriginalUrl&quot;)
     public String getOriginalUrl(String shortCode) {
-<span class="fc" id="L71">        UrlMapping urlMapping = repository.findByShortCode(shortCode);</span>
-<span class="fc bfc" id="L72" title="All 2 branches covered.">        if (urlMapping == null) {</span>
-<span class="fc" id="L73">            return null;</span>
+<span class="fc" id="L86">        UrlMapping urlMapping = repository.findByShortCode(shortCode);</span>
+<span class="fc bfc" id="L87" title="All 2 branches covered.">        if (urlMapping == null) {</span>
+<span class="fc" id="L88">            return null;</span>
         }
-<span class="pc bpc" id="L75" title="1 of 4 branches missed.">        if (urlMapping.getExpiresAt() != null &amp;&amp; LocalDateTime.now().isAfter(urlMapping.getExpiresAt())) {</span>
-<span class="fc" id="L76">            return null; // expired</span>
+<span class="pc bpc" id="L90" title="1 of 4 branches missed.">        if (urlMapping.getExpiresAt() != null &amp;&amp; LocalDateTime.now().isAfter(urlMapping.getExpiresAt())) {</span>
+<span class="fc" id="L91">            return null; // expired</span>
         }
-<span class="fc" id="L78">        urlMapping.setClickCount(urlMapping.getClickCount() + 1);</span>
-<span class="fc" id="L79">        repository.save(urlMapping); // update click count</span>
+<span class="fc" id="L93">        urlMapping.setClickCount(urlMapping.getClickCount() + 1);</span>
+<span class="fc" id="L94">        repository.save(urlMapping); // update click count</span>
         // Send real-time update
-<span class="fc" id="L81">        messagingTemplate.convertAndSend(&quot;/topic/analytics&quot;, Map.of(&quot;shortCode&quot;, shortCode, &quot;clickCount&quot;, urlMapping.getClickCount()));</span>
+<span class="fc" id="L96">        messagingTemplate.convertAndSend(&quot;/topic/analytics&quot;, Map.of(&quot;shortCode&quot;, shortCode, &quot;clickCount&quot;, urlMapping.getClickCount()));</span>
         // Send Kafka event
-<span class="fc" id="L83">        kafkaTemplate.send(&quot;url-analytics&quot;, new AnalyticsEvent(shortCode, LocalDateTime.now(), &quot;click&quot;, null, null));</span>
-<span class="fc" id="L84">        urlClickedCounter.increment(); // Increment the clicked URL counter</span>
-<span class="fc" id="L85">        return urlMapping.getOriginalUrl();</span>
+<span class="fc" id="L98">        kafkaTemplate.send(&quot;url-analytics&quot;, new AnalyticsEvent(shortCode, LocalDateTime.now(), &quot;click&quot;, null, null));</span>
+<span class="fc" id="L99">        urlClickedCounter.increment(); // Increment the clicked URL counter</span>
+<span class="fc" id="L100">        return urlMapping.getOriginalUrl();</span>
+    }
+
+    public String fallbackGetOriginalUrl(String shortCode, Throwable throwable) {
+<span class="nc" id="L104">        logger.error(&quot;Circuit breaker fallback for getOriginalUrl: {}&quot;, throwable.getMessage());</span>
+<span class="nc" id="L105">        return null; // or some default</span>
     }
 
     @Cacheable(value = &quot;urlMappings&quot;, key = &quot;#shortCode&quot;)
     public int getClickCount(String shortCode) {
-<span class="fc" id="L90">        UrlMapping urlMapping = repository.findByShortCode(shortCode);</span>
-<span class="fc bfc" id="L91" title="All 2 branches covered.">        return urlMapping != null ? urlMapping.getClickCount() : 0;</span>
+<span class="fc" id="L110">        UrlMapping urlMapping = repository.findByShortCode(shortCode);</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">        return urlMapping != null ? urlMapping.getClickCount() : 0;</span>
     }
 
     public BulkShortenResponse bulkShortenUrls(BulkShortenRequest request) {
-<span class="fc" id="L95">        BulkShortenResponse response = new BulkShortenResponse();</span>
-<span class="fc" id="L96">        response.setResponses(request.getRequests().stream().map(this::shortenUrl).toList());</span>
-<span class="fc" id="L97">        return response;</span>
+<span class="fc" id="L115">        BulkShortenResponse response = new BulkShortenResponse();</span>
+<span class="fc" id="L116">        response.setResponses(request.getRequests().stream().map(this::shortenUrl).toList());</span>
+<span class="fc" id="L117">        return response;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ResilienceConfig.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">url-shortener</a> &gt; <a href="index.source.html" class="el_package">com.shortscale.config</a> &gt; <span class="el_source">ResilienceConfig.java</span></div><h1>ResilienceConfig.java</h1><pre class="source lang-java linenums">package com.shortscale.config;
+
+import io.github.resilience4j.bulkhead.Bulkhead;
+import io.github.resilience4j.bulkhead.BulkheadConfig;
+import io.github.resilience4j.circuitbreaker.CircuitBreaker;
+import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
+import io.github.resilience4j.ratelimiter.RateLimiter;
+import io.github.resilience4j.ratelimiter.RateLimiterConfig;
+import io.github.resilience4j.retry.Retry;
+import io.github.resilience4j.retry.RetryConfig;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import java.time.Duration;
+
+@Configuration
+<span class="fc" id="L17">public class ResilienceConfig {</span>
+
+    @Bean
+    public CircuitBreaker urlCircuitBreaker() {
+<span class="fc" id="L21">        CircuitBreakerConfig config = CircuitBreakerConfig.custom()</span>
+<span class="fc" id="L22">                .failureRateThreshold(50)</span>
+<span class="fc" id="L23">                .waitDurationInOpenState(Duration.ofMillis(1000))</span>
+<span class="fc" id="L24">                .permittedNumberOfCallsInHalfOpenState(3)</span>
+<span class="fc" id="L25">                .slidingWindowSize(10)</span>
+<span class="fc" id="L26">                .build();</span>
+<span class="fc" id="L27">        return CircuitBreaker.of(&quot;urlCircuitBreaker&quot;, config);</span>
+    }
+
+    @Bean
+    public Retry urlRetry() {
+<span class="fc" id="L32">        RetryConfig config = RetryConfig.custom()</span>
+<span class="fc" id="L33">                .maxAttempts(3)</span>
+<span class="fc" id="L34">                .waitDuration(Duration.ofMillis(500))</span>
+<span class="fc" id="L35">                .build();</span>
+<span class="fc" id="L36">        return Retry.of(&quot;urlRetry&quot;, config);</span>
+    }
+
+    @Bean
+    public Bulkhead urlBulkhead() {
+<span class="fc" id="L41">        BulkheadConfig config = BulkheadConfig.custom()</span>
+<span class="fc" id="L42">                .maxConcurrentCalls(10)</span>
+<span class="fc" id="L43">                .maxWaitDuration(Duration.ofMillis(100))</span>
+<span class="fc" id="L44">                .build();</span>
+<span class="fc" id="L45">        return Bulkhead.of(&quot;urlBulkhead&quot;, config);</span>
+    }
+
+    @Bean
+    public RateLimiter urlRateLimiter() {
+<span class="fc" id="L50">        RateLimiterConfig config = RateLimiterConfig.custom()</span>
+<span class="fc" id="L51">                .limitForPeriod(100)</span>
+<span class="fc" id="L52">                .limitRefreshPeriod(Duration.ofSeconds(1))</span>
+<span class="fc" id="L53">                .timeoutDuration(Duration.ofMillis(100))</span>
+<span class="fc" id="L54">                .build();</span>
+<span class="fc" id="L55">        return RateLimiter.of(&quot;urlRateLimiter&quot;, config);</span>
+    }
+
+    @Bean
+    public Retry urlShortenRetry() {
+<span class="fc" id="L60">        RetryConfig config = RetryConfig.custom()</span>
+<span class="fc" id="L61">                .maxAttempts(3)</span>
+<span class="fc" id="L62">                .waitDuration(Duration.ofMillis(500))</span>
+<span class="fc" id="L63">                .build();</span>
+<span class="fc" id="L64">        return Retry.of(&quot;urlShortenRetry&quot;, config);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

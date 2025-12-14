@@ -12,6 +12,7 @@ com\shortscale\api\dto\BulkShortenResponse.class
 com\shortscale\api\dto\ShortenResponse.class
 com\shortscale\config\RedisConfig.class
 com\shortscale\model\UrlMapping.class
+com\shortscale\config\ResilienceConfig.class
 com\shortscale\util\HashGenerator.class
 com\shortscale\api\dto\ShortenRequest.class
 com\shortscale\util\RateLimiter.class

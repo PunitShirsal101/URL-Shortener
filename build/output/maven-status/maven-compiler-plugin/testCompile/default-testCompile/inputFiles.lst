@@ -4,5 +4,6 @@ C:\Workspace\URL-Shortener\src\test\java\com\shortscale\util\HashGeneratorTest.j
 C:\Workspace\URL-Shortener\src\test\java\com\shortscale\controller\UrlControllerTest.java
 C:\Workspace\URL-Shortener\src\test\java\com\shortscale\ApplicationTest.java
 C:\Workspace\URL-Shortener\src\test\java\com\shortscale\repository\RedisUrlRepositoryTest.java
+C:\Workspace\URL-Shortener\src\test\java\com\shortscale\service\UrlServiceIntegrationTest.java
 C:\Workspace\URL-Shortener\src\test\java\com\shortscale\controller\RedirectControllerTest.java
 C:\Workspace\URL-Shortener\src\test\java\com\shortscale\service\UrlServiceTest.java
